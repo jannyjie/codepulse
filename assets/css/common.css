@@ -3,12 +3,21 @@ body{font-family: 'Noto Sans TC';letter-spacing: 0.1em;font-size: 16px}
 button:focus,input:focus,textarea:focus,a:focus{outline: none}
 a:hover{text-decoration: none}
 img{max-width: 100%}
+.text-danger{color: #ff0000}
 .pagecont{min-height: calc(100% - 20px)}
 * { touch-action: pan-y; } 
 .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
     -ms-touch-action: auto;
         touch-action: auto;
 }
+/*--------------------*/
+/*       header       */
+/*--------------------*/
+.headerwrap.fixed{padding-top: 60px}
+.fixed header{position: fixed;top: 0;right: 0;left: 0;z-index: 1030;}
+.navbar-center{justify-content: center!important}
+.navbar-center.navbar .navbar-collapse{flex-grow: 0}
+
 /*---------------------*/
 /*     Search form     */
 /*---------------------*/
@@ -33,18 +42,29 @@ ul.twocol li{float: left;width: 50%}
 ul.lefticon li{padding-left: 26px;position: relative}
 ul.lefticon li i {width: 18px;text-align: center;position: absolute;left: 0;top: 0}
 
+.has_submenu{position: relative}
+.has_submenu ul{width: 100%;list-style: none;padding: 0;}
+
 /*-------------------*/
 /* scrool customized */
 /*-------------------*/
+/*
 ::-webkit-scrollbar {width: 10px;}
-/* Track */
 ::-webkit-scrollbar-track {background: #f1f1f1; }
-/* Handle */
 ::-webkit-scrollbar-thumb {background: #888; }
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {background: #555; }
+*/
 
-/*---- common styles end. update:20190710 ---- */
+/*------------------*/
+/*    responsive    */
+/*------------------*/
+@media (min-width:768px){
+    .has_submenu ul{position: absolute;left: 0;top: 100%; display: none}
+    .has_submenu:hover ul{display: block}
+}
+
+/*---- common styles end. updated:20190711 ---- */
+
 
 /*--------------------*/
 /* Project Customized */
