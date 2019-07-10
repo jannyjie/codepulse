@@ -117,3 +117,13 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+.slick-arrow{position: absolute;left: 10px;top: calc(50% - 20px);width: 40px;height: 40px;font-size: 0;text-align: center;z-index: 3;background: rgba(255, 255, 255, 0.5);border: 0;border-radius: 50%;opacity: 0;transition: .3s linear all}
+.slick-arrow:hover{background: #fff}
+.slick-slider:hover .slick-arrow{opacity: 1}
+.slick-arrow:before{content: "\f053";font-family: "Font Awesome 5 Free";font-size: 16px;line-height: 40px;font-weight: 900;color: #333}
+.slick-next.slick-arrow{left: auto;right: 10px}
+.slick-next.slick-arrow:before{content: '\f054';}
+.slick-dots{position: absolute;width: 100%;left: 0;bottom: 0;text-align: center;list-style: none;padding: 0}
+.slick-dots li{display: inline-block}
+.slick-dots li button{background: #fff;border: 0;border-radius: 50%;width: 12px;height: 12px;margin: 5px 3px;font-size: 0}
+.slick-dots li.slick-active button{background: #333}

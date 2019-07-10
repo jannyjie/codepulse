@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900');
 body{font-family: 'Noto Sans TC';letter-spacing: 0.1em;font-size: 16px}
+button:focus,input:focus,textarea:focus,a:focus{outline: none}
+a:hover{text-decoration: none}
+img{max-width: 100%}
 .pagecont{min-height: calc(100% - 20px)}
 * { touch-action: pan-y; } 
 .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
