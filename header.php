@@ -21,10 +21,10 @@
 </head>
 
 <body>
-    <div class="headerwrap fixed">
+    <div class="headerwrap">
         <header>
             <div class="container">
-            <nav class="navbar navbar-expand-md">
+            <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>

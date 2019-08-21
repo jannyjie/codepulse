@@ -44,7 +44,7 @@ img{max-width: 100%}
 ul.twocol:after{content: '';display: table;clear: both}
 ul.twocol li{float: left;width: 50%}
 ul.lefticon li{padding-left: 26px;position: relative}
-ul.lefticon li i {width: 18px;text-align: center;position: absolute;left: 0;top: 0}
+ul.lefticon li i {width: 18px;text-align: center;position: absolute;left: 0;top: 4px;}
 ul.iconlist{display: inline-flex;margin: 0;padding: 0;list-style: none;font-size: 18px}
 ul.iconlist a{padding: 6px;display: block}
 
@@ -66,16 +66,37 @@ ul.iconlist a{padding: 6px;display: block}
 .scrollToTop {background: rgba(0, 0, 0, 0.1);bottom: 20px;display: none;height: 40px;padding: 2px;position: fixed;right: 20px;text-align: center;text-decoration: none;width: 40px;z-index: 99999;}
 .scrollToTop i {color: #fff;font-size: 20px;line-height: 40px}
 .scrollToTop:hover {background: rgba(0, 0, 0, 0.6);text-decoration: none;}
+/*-----------------*/
+/*      footer     */
+/*-----------------*/
+.footer-title{margin-bottom: 1em}
+.iframewrap iframe{width: 100%;min-height: 300px}
+footer li,footer p{line-height: 2em}
+footer .lefticon li i{line-height: 1.5em}
+footer .iframewrap iframe{min-height: 180px}
+.copyright{font-size: 13px;}
+
+/*-----------------*/
+/*    bigbanner    */
+/*-----------------*/
+.bigbanner{display: flex;align-items: center;justify-content: center;text-align: center;}
 
 /*------------------*/
 /*    responsive    */
 /*------------------*/
-@media (min-width:768px){
+@media (min-width:992px){
     .has_submenu ul{position: absolute;left: 0;top: 100%}
     .has_submenu:hover ul{display: block}
+    .bigbanner {min-height: calc(100vh - 60px)}
+}
+@media (max-width:991px){
+    .header, .header>.container{padding: 0}
+    .navbar-nav{padding: 15px 0}
+    .navbar-nav li:not(:last-of-type) .nav-link{border-bottom: 1px solid #e6e6e6}
+    .navbar-nav .nav-link{font-size: 18px}
 }
 
-/*---- common styles end. updated:20190731 ---- */
+/*---- common styles end. updated:20190821 ---- */
 
 
 /*--------------------*/
