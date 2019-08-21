@@ -22,6 +22,15 @@
 
 <body>
     <div class="headerwrap">
+        <div class="topbar">
+			<div class="container">
+                <a href="#">全館優惠</a>
+				<ul class="toplist d-none d-sm-flex">
+                    <li><a href="about.php"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="login.php"><i class="fas fa-user"></i> 會員註冊/登入</a></li>
+                </ul>
+			</div>
+		</div>
         <header>
             <div class="container">
             <nav class="navbar navbar-expand-lg">

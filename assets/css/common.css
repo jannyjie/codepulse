@@ -10,6 +10,16 @@ img{max-width: 100%}
 /*       header       */
 /*--------------------*/
 .fixed header{position: fixed;top: 0;right: 0;left: 0;z-index: 1030;background: rgba(255, 255, 255, 0.75);box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);}
+.topbar {background: #f9f9f9;}
+.topbar .container{display: flex;justify-content: space-between;align-items: center;}
+.topbar a{font-size: 14px;margin:8px 0}
+.toplist{list-style: none;padding: 0;display: flex;justify-content: center;align-items: center;margin:8px 0}
+.toplist li{position: relative;}
+.toplist li+li:before{content: '|';display: block;position: absolute;left: -1px;top: 1.5px;;color: #1d1a2d;font-size: 14px}
+.toplist li i{line-height: 20px;}
+.toplist li a{padding: 0 10px;}
+.toplist li a+a{padding-left: 0;line-height: 24px;}
+
 
 /*---------------------*/
 /*     Search form     */
@@ -85,6 +95,7 @@ footer .iframewrap iframe{min-height: 180px}
 /*    responsive    */
 /*------------------*/
 @media (min-width:992px){
+    .col-lg-p20{flex-basis: 20%;max-width: 20%}
     .has_submenu ul{position: absolute;left: 0;top: 100%}
     .has_submenu:hover ul{display: block}
     .bigbanner {min-height: calc(100vh - 60px)}

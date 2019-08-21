@@ -2,7 +2,7 @@
     <div class="container pt-4 pb-lg-3">
       <div class="row">
         <div class="col-md-6 col-lg-2 d-none d-lg-block">
-          <a href="index.php"><img alt="" src="assets/images/logo.png"></a>
+          <a href="index.php" class="logo"><img alt="" src="assets/images/logo.png"></a>
         </div>
         <div class="col-md-6 col-lg-2">
           <h5 class="footer-title"><span>關於我們</span></h5>
