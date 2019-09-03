@@ -89,7 +89,7 @@ footer .iframewrap iframe{min-height: 180px}
 /*-----------------*/
 /*    bigbanner    */
 /*-----------------*/
-.bigbanner{display: flex;align-items: center;justify-content: center;text-align: center;}
+.bigbanner{display: flex;align-items: center;justify-content: center;text-align: center;background-size: cover;background-position: center}
 
 /*------------------*/
 /*    responsive    */
