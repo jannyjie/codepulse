@@ -2,7 +2,7 @@
     <div class="container pt-4 pb-lg-3">
       <div class="row">
         <div class="col-md-6 col-lg-2 d-none d-lg-block">
-          <a href="index.php" class="logo"><img alt="" src="assets/images/logo.png"></a>
+          <a href="index.php" class="logo"><img alt="" src="assets/img/logo.png"></a>
         </div>
         <div class="col-md-6 col-lg-2">
           <h5 class="footer-title"><span>關於我們</span></h5>
@@ -18,6 +18,7 @@
           <h5 class="footer-title"><span>聯絡我們</span></h5>
             <ul class="lefticon list-unstyled">
                 <li><a href="tel:0223650660"><i class="fas fa-phone"></i>02 23650660</a></li>
+                <li><a href="line://ti/p/@123456"><i class="fab fa-line"></i>@123456</a></li>
                 <li><i class="fas fa-clock"></i>10:00-18:00</li>
                 <li><a href="mailto:service@codepulse.com.tw"><i class="fas fa-envelope"></i>service@codepulse.com.tw</a></li>
                 <li><a href="https://www.google.com.tw/maps/place/可思科技股份有限公司/" title="" target="_blank"><i class="fas fa-map-marker-alt"></i>106台北市大安區羅斯福路三段191號3樓</a></li>

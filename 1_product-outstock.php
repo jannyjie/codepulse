@@ -42,25 +42,12 @@
                     【輕盈水感】水為基底搭配無油配方、三效獨特霧光Dry Touch成分，提供給肌膚絲絨般霧面觸感，使肌膚清爽無負擔。 <br><br>
                     【專業成分Cellular Bioprotection™】有效保護肌膚，提升肌膚防禦力。</p>
                 <hr>
-                <div class="options">
-                    <span>選項</span>
-                    <select>
-                        <option>一件</option>
-                        <option>全套組</option>
-                    </select>
-                </div>
-                <div class="options">
-                    <span>數量</span>
-                    <input type="text" value="1">
-                </div>
-                <hr>
                 <p class="price">
                     <span class="special">NT$998</span>
                     <span class="origin">NT$899</span>
                 </p>
                 <div class="btns">
-                    <button type="button" class="btn btn-add">加入購物車</button>
-                    <button type="button" class="btn btn-primary">立即購買</button>
+                    <button type="button" class="btn btn-secondary">缺貨中</button>
                     <button type="button" class="btn btn-wish"><span class="d-none d-lg-inline">加入收藏</span> <i class="far fa-heart"></i></button>
                 </div>
                 <div class="btns">分享：
