@@ -23,17 +23,17 @@
             </div>
             <?php endforeach; ?>
         </div>
-        <div class="pagingwrap">
-                <ul class="pagination justify-content-center mt-4">
-                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
-                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
-                  </ul>
-            </div>
+        <div class="pagingwrap text-center">
+            <ul>
+                <li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
+                <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+                <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
+              </ul>
+        </div>
     </div>
 </div>
 <?php include('footer.php'); ?>

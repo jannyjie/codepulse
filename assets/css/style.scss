@@ -1,0 +1,23 @@
+$color: (default:#28a7e1, main:#222729, secondary: #2d83a7);
+
+@function color($selected) {
+  @return map-get($color, $selected);
+}
+
+@mixin transition{
+    transition: .2s linear all;
+    -webkit-transition: .2s linear all;
+    -moz-transition: .2s linear all;
+    -ms-transition: .2s linear all;
+    -o-transition: .2s linear all;
+}
+
+body{color: color(default)}
+a{
+    color: color(default);
+    @include transition;
+    &:hover{
+        text-decoration: none;
+        color: color(main)
+    }
+}

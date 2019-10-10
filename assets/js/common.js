@@ -16,6 +16,9 @@ $(document).ready(function(){
             $(this).toggleClass('opened');
             $(this).next().slideToggle();
         });
+    }else{
+        var topbottomh = $('.headerwrap').height() + $('.footer').height();
+        $('.pagecont').css('min-height','calc(100vh - '+ topbottomh +'px)');
     }
     $('.searchtoggle>a,.searchwrap .close').on('click',function(){
        $('.searchwrap').toggleClass('open'); 
@@ -23,6 +26,8 @@ $(document).ready(function(){
     $('.mainslider').slick({
         dots: true,
         arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
@@ -36,6 +41,8 @@ $(document).ready(function(){
 
       album.slick({
         mobileFirst: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
         fade: true,
         arrows: false,
         draggable: false,

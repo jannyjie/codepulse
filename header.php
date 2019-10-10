@@ -4,7 +4,7 @@
 <head>
     <title>Codepulse Demo</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -45,7 +45,7 @@
 		</div>
         <header>
             <div class="container">
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg p-0">
                 <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
