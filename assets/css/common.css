@@ -2,17 +2,20 @@
 /*  fonts import  */
 /*----------------*/
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900');
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:100,300,400,500,700,900&display=swap");
+
 
 /*----------------*/
 /* Common Default */
 /*----------------*/
-body .serif{font-family:'source-han-serif-tc','Microsoft Jhenghei',serif}
+body .serif{font-family:'Noto Serif TC',serif}
 body{font-family: 'Noto Sans TC','Microsoft Jhenghei';letter-spacing: 0.1em;font-size: 16px;width: 100%;overflow-x: hidden;}
 button:focus,input:focus,textarea:focus,a:focus{outline: none}
 a{color: #222729}
 a:hover{text-decoration: none;color: #28a7e1}
 img{max-width: 100%}
-.text-danger{color: #ff0000}
+.desc img{height: auto!important}
+.text-danger{color: #ff0000!important}
 
 /*--------------------*/
 /*       header       */
@@ -101,6 +104,18 @@ ul.inlinelist li a{display: block;padding: 2px 6px;}
 ::-webkit-scrollbar-thumb {background: #888; }
 ::-webkit-scrollbar-thumb:hover {background: #555; }
 */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #aeabab;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #aeabab;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #aeabab;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #aeabab;
+}
 /*-------------------*/
 /*    scrolltoTop    */
 /*-------------------*/
