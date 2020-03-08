@@ -1,0 +1,63 @@
+.thumbs{
+  margin: 8px -4px 0 -4px;
+  .item{
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+.product-info{
+  h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0.75em;
+    @include res(xlpad){
+      font-size: 28px;
+    }
+    @include res(pc){
+      font-size: 32px;
+    }
+  }
+  .price{
+    font-size: 18px;
+    @include res(xlpad){
+      font-size: 20px;
+    }
+    .special{
+      font-weight: bold;
+    }
+  }
+  .btn-addwish{
+    border: 1px solid $main;
+    display: inline-flex;
+    @include square(38px);
+    font-size: 19px;
+  }
+}
+.options{
+  padding: 6px 0;
+  >*{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  >span{
+    width: 60px;
+  }
+  >span + *{
+    width: 130px;
+  }
+  >span + .price{
+    width: 200px;
+  }
+  >span + .box-qty{
+    width: calc(100% - 70px);
+  }
+}
+.relatedslider{
+  padding-bottom: 30px;
+  .slick-slide{
+    padding: 5px;
+    .price{
+      font-size: 16px;
+    }
+  }
+}

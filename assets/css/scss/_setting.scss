@@ -1,0 +1,232 @@
+// Import
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,600,700,900|Oswald:400,500,700,900&display=swap');
+
+
+// colors
+$main: #003185;
+$main-light: #0f4499;
+$main-dark: #052a68;
+$main-darker: #001c4e;
+$main-text: #233d60;
+$main-text-light: #8b9eb7;
+$light: #f6f7fb;
+$black: #111;
+$black-light: #373737;
+$black-lighter: #5f5f5f;
+$white: #fff;
+$grey: #979797;
+$red: #dd0808;
+$yellow: #ffaa24;
+$none: transparent;
+
+/* brand */
+$brand-line: #4ecd00;
+$brand-facebook: #4267b2;
+$brand-google: #ea4335;
+
+/* opacity & gradient */
+$black-op: rgba(0, 0, 0, 0.69);
+$black-gradient: linear-gradient(to left, $none, rgba(0, 0, 0, 0.68), $none);
+
+
+// fonts
+$font-default: 'Noto Sans TC', sans-serif;
+$font-en: 'Oswald','Noto Sans TC', sans-serif;
+$font-arial: 'Arial', 'Noto Sans TC', sans-serif;
+
+// shadows
+$shadow-button: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+$shadow-text: 0 2px 8px rgba(0, 0, 0, 0.7);
+$shadow-box: 0 0 8px 0 rgba(0, 0, 0, 0.11);
+$shadow-card: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+// borders
+$border:solid 1px #c5c5c5;
+$border-light:solid 1px #d8d8d8;
+$border-white:solid 1px #fff;
+
+@function pow($base, $exponents) {
+  $raised: 1;
+  @if $exponents > 0 {
+    @for $i from 1 through $exponents {
+      $raised: $raised * $base;
+    }
+  }
+  
+  @return $raised;
+}
+@function floorD($number, $n:0){
+  $p:pow(10, $n);
+  @return floor($number * $p) / $p;
+}
+
+// margin & padding
+@mixin m($direction, $size) {
+  margin-#{$direction}: $size!important;
+}
+@mixin p($direction, $size) {
+  padding-#{$direction}: $size!important;
+}
+
+
+// media queries
+$device: (xlpc:1600px, pc:1440px, nb:1250px, xlpad:992px, pad:768px, phone:360px);
+
+@function device($name) {
+  @return map-get($device, $name);
+}
+
+@mixin res($selected, $mode: to-pc) {
+  @if $mode == to-pc{
+    @media all and (min-width: device($selected)) {
+      @content;
+    }
+  }
+  @if $mode == to-mb{
+    $size: device($selected) - 1px;
+    @media all and (max-width: $size) {
+      @content;
+    }
+  }
+}
+
+
+// utilities
+@mixin fa{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+@mixin square($size){
+  width: $size;
+  height: $size;
+}
+
+@mixin setgrids($number, $gap, $res: ((device:'xlpc'),(res-number:'2'),(res-gap:$gap))){
+  $grid-width: 100%;
+  $calcgap: false;
+  @if $number > 1  {
+    @if $gap > 0px {
+      $calcperc: floorD(100/$number,2)*1%;
+      $calcgap: $gap*($number - 1)/$number;
+      $grid-width : calc(#{$calcperc} - #{$calcgap});
+    } @else{
+      $grid-width : 100%/$number;
+    }
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex-basis: $grid-width;
+    max-width: $grid-width;
+    @if ($gap != 0px){
+      margin-bottom: $gap;
+    }
+    @if ($calcgap){
+      &:not(:nth-child(#{$number}n+#{$number})){
+        margin-right: $gap;
+      }
+      &:nth-child(#{$number}n+#{$number}){
+        margin-right: 0;
+      }
+    }
+    @if ($res){
+      @each $i in $res{
+        $r-dev: nth($i,1);
+        $r-num: nth($i,2);
+        $r-gap: nth($i,3);
+        @include res($r-dev){
+          $r-calcperc: floorD(100/$r-num,2)*1%;
+          $r-calcgap: $r-gap*($r-num - 1)/$r-num;
+          margin-bottom: $r-gap;
+          &:not(:nth-child(#{$r-num}n+#{$r-num})){
+            margin-right: $r-gap;
+          }
+          &:nth-child(#{$r-num}n+#{$r-num}){
+            margin-right: 0;
+          }
+          $r-grid-width: calc(#{$r-calcperc} - #{$r-calcgap});
+          @if $r-gap == 0px{
+            $r-grid-width: $r-calcperc;
+          }
+          flex-basis: $r-grid-width;
+          max-width: $r-grid-width;
+        }
+      }
+    }
+  }
+}
+
+@mixin imgbox($ratio,$minheight:null){
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+    &:before{
+      content: '';
+      display: block;
+      @if ($minheight){
+        min-height: $minheight;
+      }
+      width: 100%;
+      padding-bottom: $ratio;
+    }
+}
+
+@mixin textbox($line, $lineheight: 1.5em){
+  display: block;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  line-height: $lineheight;
+  -webkit-line-clamp: $line;
+  height: ($lineheight * $line);
+}
+
+@mixin flexbox($align){
+    display: flex;
+    @if ($align == center) {
+        align-items: center;
+        justify-content: center;
+    }
+    @else if($align == x) {
+        justify-content: center;
+    }
+    @else if($align == y) {
+        align-items: center;
+    }
+}
+
+@mixin oval($size,$bg){
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $bg;
+  @include flexbox(center)
+}
+
+@mixin overlay($bg){
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $bg;
+}
+
+@mixin absolute($perc){
+  top: $perc;
+  left: $perc;
+  right: $perc;
+  bottom: $perc;
+}
+
+@mixin scrollbar($width,$bg,$color,$hover){
+  $scrollbar: -webkit-scrollbar;
+  ::#{$scrollbar} {width: $wid;height: $width}
+  ::#{$scrollbar}-track {background: $bg; }
+  ::#{$scrollbar}-thumb {background: $color; }
+  ::#{$scrollbar}-thumb:hover {background: $hover; }
+}

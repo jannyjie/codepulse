@@ -1,0 +1,7 @@
+.box-msg{
+  background: transparentize($main,0.92);
+  padding: 30px;
+  @include res(xlpad){
+    padding: 40px;
+  }
+}

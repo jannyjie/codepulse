@@ -1,0 +1,34 @@
+.box-news{
+  display: block;
+  border: 1px solid #eee;
+  .box-img{
+    &:before{
+      padding-bottom: 56.25%;
+    }
+  }
+  .cont{
+    position: relative;
+    padding: 18px 10px 5px;
+    h5{
+      @include textbox(1,1.5em);
+      margin-bottom: 0;
+    }
+    .date{
+      position: absolute;
+      background: $main-light;
+      color: $white;
+      padding: 3px 6px;
+      border-radius: 3px;
+      left: 10px;
+      top: -14px;
+    }
+  }
+  &:hover{
+    box-shadow: $shadow-button;
+  }
+}
+
+.date{
+  color: $grey;
+  font-size: 14px;
+}

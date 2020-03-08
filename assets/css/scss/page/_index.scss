@@ -1,0 +1,137 @@
+.bigbanner{
+  @include imgbox(27.86%, 200px);
+  .content{
+    @include overlay($none);
+    @include flexbox(center);
+    text-align: center;
+    h2{
+      background: $black-gradient;
+      text-shadow: $shadow-text;
+      font-family: $font-en;
+      letter-spacing: 0.01em;
+      color: #fff;
+      font-size: 36px;
+      padding: 6px 0;
+      margin-bottom: 0.3em;
+      @include res(pad){
+        font-size: 48px;
+        padding: 12px 0;
+      }
+      @include res(nb){
+        font-size: 62px;
+      }
+    }
+  }
+}
+.slidersec{
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.caseslider{
+  margin:0 -4px;
+  .item{
+    padding: 0 4px;
+    .oval{
+      @include res(nb){
+        @include square(120px);
+        img{
+          max-width: 75px;
+          max-height: 75px;
+        }
+      }
+    }
+  }
+}
+.business{
+  .card{
+    .card-body{
+      padding: 10px 20px;
+      @include flexbox(center);
+      .title-card{
+        font-weight: normal;
+        font-size: 16px;
+        color: $black-lighter;
+        margin-bottom: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+.contact-us{
+  .content{
+      padding: 40px 30px;
+    @include res(xlpad){
+      padding: 80px 60px;
+    }
+    @include res(pc){
+      padding: 120px 80px;
+      max-width: 720px;
+    }
+    p{
+      color: #dcdde9;
+      font-size: 16px;
+      line-height: 1.7;
+      letter-spacing: 0.015em;
+    }
+  }
+}
+.newslider {
+  margin-left: -8px;
+  margin-right: -8px;
+  .item{
+    padding: 0 8px;
+    margin-bottom: 20px;
+  }
+}
+.mainslider {
+  margin: auto;
+  @include res(nb){
+    max-width: 1240px;
+  }
+  @include res(pc){
+    max-width: 1400px;
+  }
+  @include res(xlpc){
+    max-width: 1600px;
+  }
+  .slick-arrow{
+    opacity: 0.9;
+    background: $none;
+    &:before{
+      color: $white;
+      text-shadow: $shadow-text;
+      font-size: 32px;
+    }
+    &:hover:before{
+      color: $main-light;
+    }
+  }
+  .slick-slide:not(.slick-current) {
+    opacity: .55;
+  }
+  .slick-list {
+    overflow: visible!important;
+  }
+}
+.cooperation{
+  .item{
+    a{
+      @include flexbox(center);
+      height: 50px;
+      padding: 0 8px;
+      @include res(xlpad){
+        height: 70px;
+        padding: 0 10px;
+      }
+      @include res(pc){
+        height: 80px;
+        padding: 0 20px;
+      }
+    }
+    img{
+      max-height: 100%;
+    }
+  }
+}

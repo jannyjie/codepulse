@@ -1,0 +1,126 @@
+@import "../setting";  // vendor
+.headerwrap{
+  a{
+    color: $main-text;
+    &:hover{
+      color: $main-text-light;
+    }
+  }
+  .navbar-toggler:not(.collapsed){
+    .fa-bars:before{
+      content: '\f00d';
+    }
+  }
+  .navbar-toggler-icon {
+    line-height: 1.5em;
+  }
+  .navbar-brand{
+    img{
+      max-height: 48px;
+      @include res(xlpad){
+        max-height: 64px;
+      }
+    }
+  }
+  &.fixed{
+    header{
+      position: fixed;
+      z-index: 5;
+      left: 0;
+      top: 0;
+      width: 100%;
+      background: $white;
+      box-shadow: $shadow-box;
+      .has_submenu{
+        ul{
+          @include res(xlpad){
+            padding-top: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+.topbar{
+  text-align: right;
+  padding: 8px 0;
+  border-bottom: 1px solid #ededed;
+  a{
+    font-size:13px;
+    color: $main-text-light;
+    &:hover{
+      color: $main-light;
+    }
+  }
+}
+
+.has_submenu {
+  position: relative;
+  &:hover{
+    ul{
+      display: block;
+    }
+  }
+  ul{
+    width: auto;
+    list-style: none;
+    padding: 0;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 10;
+    padding-top: 8px;
+    text-align: center;
+    li{
+      white-space: nowrap;
+      box-shadow: $shadow-box;
+      position: relative;
+      background: #fff;
+      a{
+        display:block;
+        background: #fff;
+        font-size: 0.9em;
+        padding: 0.3rem 0.75rem!important;
+        &:hover{
+          background: $main-light;
+          color: $white;
+        }
+        @include res(xlpad){
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+.navbar-nav{
+  @include res(xlpad,to-mb){
+    max-height: calc(100vh - 70px);
+    overflow-y: scroll;
+  }
+  >li{
+    >a{
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+      @include res(xlpad,to-mb){
+        padding: 0.5em 1em;
+        border-bottom: $border;
+        width: 100%;
+      }
+      @include res(nb){
+        font-size: 15px;
+        padding-right:0!important;
+      }
+    }
+    &:not(:last-child){
+      @include res(xlpad){
+        margin-right: 1.5em;
+      }
+      @include res(nb){
+        margin-right: 3em;
+      }
+    }
+  }
+}

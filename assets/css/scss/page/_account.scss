@@ -1,0 +1,128 @@
+.form-box{
+  max-width: 800px;
+  margin: auto;
+  background: #f2f2f2;
+  border-radius: 6px;
+  padding: 30px 20px 30px;
+  position: relative;
+  .pagetitle{
+    h1{
+      font-size: 2em;
+      margin-bottom: 0;
+    }
+  }
+  select,input,textarea{
+    border: 0;
+  }
+  select{
+    height: 34px;
+  }
+  label.checkbox input+span:before{
+    background: $white;
+  }
+  &.sm{
+    max-width: 480px;
+  }
+}
+.social_login{
+  .btn{
+    min-width: auto;
+    width: 100%;
+  }
+}
+.memberlist{
+  .card{
+    text-align: center;
+    border: 0;
+    margin-bottom: 30px;
+    i{
+      @include square(80px);
+      @include flexbox(center);
+      margin:0 auto 0.25em;
+      font-size: 36px;
+      border-radius: 50%;
+      background: $main-light;
+      color: $white;
+      box-shadow: $shadow-button;
+      @include res(xlpad){
+        @include square(90px);
+        font-size:48px;
+      }
+    }
+    h4{
+      font-size: 1.125em;
+      @include res(xlpad){
+        font-size: 1.25em;
+      }
+    }
+    a:hover{
+      
+      i{
+        color: $main;
+        background:$white;
+      }
+    }
+  }
+}
+.addbook{
+  background: #f1f1f1;
+  border-left: 5px solid $main;
+  border-radius: 6px;
+  padding: 10px;
+  @include res(xlpad){
+    padding: 20px;
+  }
+  h5{
+    margin: 0.25em 0;
+    font-size: 16px;
+    @include textbox(2,1.5em);
+  }
+  .price{
+    s{
+      @include res(pad,to-mb){
+        display: none;
+      }
+    }
+  }
+}
+.links{
+  text-align: right;
+  .btn{
+    min-width: auto;
+    border-radius: 0;
+    padding: 0 15px;
+    &:hover{
+      opacity: .75
+    }
+  }
+  .btn-main{
+    background: transparent;
+    color: $main-light;
+    border: 0;
+  }
+  .btn-link{
+    color: $black;
+  }
+}
+.list-order{
+  .btn-main{
+    min-width: auto;
+    font-size: 13px;
+    padding: 4px 8px;
+    margin-left: 12px;
+    white-space: nowrap;
+  }
+  .badge{
+    background: $grey;
+    color: $white;
+    font-weight: normal;
+  }
+  li{
+    margin-bottom: 0.5em;
+    padding: 5px 10px;
+    background: transparentize($main,0.95);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
