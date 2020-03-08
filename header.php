@@ -26,10 +26,10 @@
     <div class="headerwrap">
         <div class="topbar">
 			<div class="container">
-                <a href="#">全館優惠</a>
+                <a href="article.php">全館優惠</a>
 				<ul class="toplist d-none d-sm-flex">
                     <li><a href="about.php"><i class="fas fa-envelope"></i></a></li>
-                    <li><a href="login.php"><i class="fas fa-user"></i> 會員註冊/登入</a></li>
+                    <li><a href="_login.php"><i class="fas fa-user"></i> 會員註冊/登入</a></li>
                 </ul>
 			</div>
 		</div>
@@ -47,7 +47,7 @@
                             <a class="nav-link" href="index.php">首頁</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="article.php">關於我們</a>
+                            <a class="nav-link" href="about.php">關於我們</a>
                         </li>
                         <li class="nav-item has_submenu">
                             <a class="nav-link dropdown-toggle" href="category.php" data-toggle="dropdown">
@@ -60,6 +60,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="news.php">最新消息</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.php">聯絡我們</a>
                         </li>
                     </ul>
                 </div>

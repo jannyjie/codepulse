@@ -29,19 +29,15 @@
                 <form action="success.php">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label>姓氏 <span class="text-danger">*</span></label>
+                            <label>姓名 <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" placeholder="" required>
-                            <span class="text-danger">姓氏至少要輸入1個字</span>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>名字 <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="" required>
+                            <span class="text-danger">姓名至少要輸入1個字</span>
                         </div>
                         <div class="form-group col-md-6">
                             <label>聯絡電話</label>
                             <input type="tel" class="form-control" placeholder="">
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-12">
                             <label>Email <span class="text-danger">*</span></label>
                             <input type="email" class="form-control" placeholder="" required>
                         </div>
