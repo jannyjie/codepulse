@@ -1,3 +1,4 @@
+@import "../setting";  // vendor
 // icon
 .i_arrow{
   position: relative;
@@ -5,8 +6,8 @@
   vertical-align: middle;
   margin-left: 5px;
   transition: .1s linear all;
-  &:before{display: block;width: 21px;background: #fff;height: 1px;content: ''}
-  &:after{display: block;width: 8px;height: 1px;background: #fff;content: '';position: relative;left: calc(100% - 8px);top: -3px;transform: rotate(30deg)}
+  &:before,&:after{display: block;width: 21px;background: #fff;height: 1px;content: ''}
+  &:after{width: 8px;background: #fff;position: relative;left: calc(100% - 8px);top: -3px;transform: rotate(30deg)}
 }
 
 // text
@@ -79,6 +80,16 @@
     color: $red;
   }
 }
+/* textbox */
+.txt-l1{
+  @include textbox(1,1.5em)
+}
+.txt-l2{
+  @include textbox(2,1.5em)
+}
+.txt-l3{
+  @include textbox(3,1.5em)
+}
 
 // bg
 .bgcover{
@@ -86,51 +97,14 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.bg-light{
-  background: $light!important
-}
-.bg-lighter{
-  background: #fafafa!important
-}
-.bg-cate-1{
-  background: #07a175!important;
-}
-.bg-cate-2{
-  background: #feca38!important;
-}
-.bg-cate-3{
-  background: #154899!important;
-}
-.bg-cate-4{
-  background: #14b3af!important;
-}
-.bg-cate-5{
-  background: #e84b38!important;
-}
-.bg-cate-6{
-  background: #0c2759!important;
-}
-.bg-cate-7{
-  background: #b72b79!important;
-}
-.bg-cate-8{
-  background: #6145c4!important;
-}
-.bg-cate-9{
-  background: #ed5d50!important;
-}
-.bg-cate-10{
-  background: #7d4cb7!important;
-}
-.bg-cate-11{
-  background: #f17e2c!important;
+.bg-main{
+  background: $main!important
 }
 // button
 .btn{
   text-align: center;
   font-size: 16px;
   padding: 6px 16px;
-  font-family: $font-arial;
   &:hover{
     box-shadow: $shadow-card;
   }
@@ -141,7 +115,7 @@
 }
 .btn-more{
   border: $border;
-  color: $black-lighter;
+  color: $black;
   background: $white;
   font-weight: bold;
   line-height: 1em;
@@ -149,10 +123,9 @@
   min-width: auto;
   border-radius: 20px;
   font-size: 14px;
-  font-family: Arial;
   &:not(:hover){
     .i_arrow:before,.i_arrow:after{
-      background: $black-lighter
+      background: $grey
     }
   }
   &:hover{
@@ -179,17 +152,17 @@
   &:hover{
     background: $white;
     .i_arrow:before,.i_arrow:after{
-      background: $black-lighter
+      background: $grey
     }
   }
 }
 .btn-main{
   border: 1px solid $white;
-  background: $yellow;
+  background: $second;
   box-shadow: $shadow-button;
   color: $white;
   &:hover{
-    background: $main-light;
+    background: $main;
     color: $white;
   }
 }
@@ -199,16 +172,16 @@
   box-shadow: $shadow-button;
   color: $white;
   &:hover{
-    background: $yellow;
+    background: $second;
     color: $white;
   }
 }
 .btn-white{
   background: $white;
   border-radius: 30px;
-  color: $black-light;
+  color: $grey;
   &:hover{
-    background: $yellow;
+    background: $second;
     color: #fff;
   }
 }
@@ -217,7 +190,7 @@
   padding: 15px 20px;
   box-shadow: $shadow-box;
   border: 3px solid $white;
-  color: $main-text-light;
+  color: $main;
   font-size: 18px;
   line-height: 1.4em;
   border-radius: 5px;
@@ -240,7 +213,22 @@
     background: $red;
   }
   &.new{
-    background: $yellow;
+    background: $second;
+  }
+}
+.btn-line{color: $white; background: $brand-line;
+  &:hover{
+    background: transparentize($brand-line,0.4); 
+  }
+}
+.btn-facebook{color: $white; background: $brand-facebook;
+  &:hover{
+    background: transparentize($brand-facebook,0.4); 
+  }
+}
+.btn-google{color: $white; background: $brand-google;
+  &:hover{
+    background: transparentize($brand-google,0.4); 
   }
 }
 // list
@@ -260,7 +248,7 @@
       @include flexbox(center);
       border-radius: 50%;
       font-weight: bold;
-      color: $main-light;
+      color: $main;
       &:hover,:focus{
         box-shadow: 0 0 3px 0 $main;
       }
@@ -279,15 +267,14 @@
     @include flexbox(y);
     flex-wrap: wrap;
     &:not(:first-child){
-      border-top: $border-light;
+      border-top: $border;
     }
     &:hover{
       background: $light;
     }
     .date{
       width: 100%;
-      color: $black-lighter;
-      font-family: $font-arial;
+      color: $grey;
       letter-spacing: 0.025em;
       padding-left: 24px;
       font-size: 1em;
@@ -311,7 +298,6 @@
       font-size: 14px;
       color: $grey;
       padding-right: 24px;
-      font-family: $font-arial;
       font-weight: bold;
       &:hover{
         color: $main;
@@ -336,7 +322,7 @@
     }
   }
 }
-.list-leftIcon{
+.list-angle{
   li{
     @include flexbox(y);
     a{
@@ -391,7 +377,7 @@
 }
 .board{
   padding: 15px 10px;
-  border: $border-light;
+  border: $border;
   border-radius: 15px;
   @include res(nb){
     padding: 25px 20px
@@ -407,6 +393,19 @@
 }
 .box-img{
   @include imgbox(100%);
+  &.r-4-3{
+    &:before{
+      padding-bottom: 75%;
+    }
+  }
+  &.r-16-9{
+    &:before{
+      padding-bottom: 56.25%;
+    }
+  }
+  &.img-contain{
+    background-size: contain;
+  }
 }
 
 .box-qty{
@@ -499,7 +498,7 @@ label.checkbox{
         &:after{
           width: 10px;
           height: 10px;
-          background: $main-light;
+          background: $main;
           left: 5px;
           top: 5px;
           opacity: 0;
@@ -544,14 +543,7 @@ label.checkbox{
   }
 }
 
-.note{
+.text-danger{
   color: #e85252;
   font-size: 0.875em;
-  max-width: 520px;
-  font-family: 'microsoft jhenghei';
-  display: none;
-  animation: fadeIn .3s linear;
-  li{
-    margin-bottom: 0.5em;
-  }
 }

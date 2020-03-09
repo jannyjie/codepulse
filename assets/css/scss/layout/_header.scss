@@ -1,9 +1,9 @@
 @import "../setting";  // vendor
 .headerwrap{
   a{
-    color: $main-text;
+    color: $main;
     &:hover{
-      color: $main-text-light;
+      color: $second;
     }
   }
   .navbar-toggler:not(.collapsed){
@@ -47,9 +47,9 @@
   border-bottom: 1px solid #ededed;
   a{
     font-size:13px;
-    color: $main-text-light;
+    color: $second;
     &:hover{
-      color: $main-light;
+      color: $main;
     }
   }
 }
@@ -83,7 +83,7 @@
         font-size: 0.9em;
         padding: 0.3rem 0.75rem!important;
         &:hover{
-          background: $main-light;
+          background: $main;
           color: $white;
         }
         @include res(xlpad){

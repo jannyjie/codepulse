@@ -1,6 +1,7 @@
+@import "../setting";  // vendor
 .footer{
-  color: rgba(255, 255, 255, 0.8);
-  background: $main-dark;
+  color: $grey;
+  background: $light;
   padding-top: 30px;
   font-size: 14px;
   line-height: 2em;
@@ -8,13 +9,13 @@
   padding-top: 42px;
   }
   a{
-    color: rgba(255, 255, 255, 0.8);
+    color: $grey;
     &:hover{
-      color: $white;
+      color: $main;
     }
   }
   h5{
-    color: $white;
+    color: $grey;
     font-weight: bold;
     font-size: 18px;
   }
@@ -30,13 +31,13 @@
       padding: 0px 8px;
   }
   input{font-size: 13px;padding: 2px 6px;font-weight: 400;border: 0;background: transparent;flex-grow: 2;}
-  button{border: 0;background: transparent;color: $white;font-size: 14px;padding: 2px 10px}
+  button{border: 0;background: transparent;color: $grey;font-size: 14px;padding: 2px 10px}
 }
 .copyright{
   font-size: 13px;
   letter-spacing: 0.1em;
   margin: 0;
-  background: $main-darker;
+  background: $main;
   text-align: center;
   padding: 15px 10px;
   color: rgba(255, 255, 255, 0.6);
@@ -52,7 +53,6 @@
   color: #fff;
   &:hover{
     background: $white;
-    color: $main-light;
+    color: $second;
   }
-  
 }

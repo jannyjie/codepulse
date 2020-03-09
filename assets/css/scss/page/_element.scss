@@ -1,0 +1,45 @@
+@import "../setting";  // vendor
+.border{
+  h2{
+    text-align: center;
+    background: #eee;
+    padding: 10px;
+  }
+  .sub{
+    padding: 5px;
+    text-align: center;
+    background: #eee;
+    margin-top: 0.5em;
+  }
+}
+.basic{
+  font-size: 60px;
+  font-family: $font-default;
+  .en{
+    font-family: $font-en;
+  }
+}
+.colors{
+  > div{
+    @include oval(60px,$white);
+    margin-right: 20px;
+  }
+  .main{
+    background: $main;
+  }
+  .second{
+    background: $second
+  }
+  .black{
+    background: $black;
+  }
+  .light{
+    background: $light
+  }
+  .grey{
+    background: $grey
+  }
+  .red{
+    background: $red
+  }
+}

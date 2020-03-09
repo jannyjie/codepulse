@@ -3,20 +3,13 @@
 
 
 // colors
-$main: #003185;
-$main-light: #0f4499;
-$main-dark: #052a68;
-$main-darker: #001c4e;
-$main-text: #233d60;
-$main-text-light: #8b9eb7;
-$light: #f6f7fb;
-$black: #111;
-$black-light: #373737;
-$black-lighter: #5f5f5f;
+$main: #2d83a7;
+$second: #28a7e1;
+$light: #f4f8fa;
+$black: #2c2c2c;
 $white: #fff;
-$grey: #979797;
+$grey: #777676;
 $red: #dd0808;
-$yellow: #ffaa24;
 $none: transparent;
 
 /* brand */
@@ -30,9 +23,8 @@ $black-gradient: linear-gradient(to left, $none, rgba(0, 0, 0, 0.68), $none);
 
 
 // fonts
-$font-default: 'Noto Sans TC', sans-serif;
+$font-default: 'Arial', 'Noto Sans TC', sans-serif;
 $font-en: 'Oswald','Noto Sans TC', sans-serif;
-$font-arial: 'Arial', 'Noto Sans TC', sans-serif;
 
 // shadows
 $shadow-button: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
@@ -42,8 +34,6 @@ $shadow-card: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
 
 // borders
 $border:solid 1px #c5c5c5;
-$border-light:solid 1px #d8d8d8;
-$border-white:solid 1px #fff;
 
 @function pow($base, $exponents) {
   $raised: 1;

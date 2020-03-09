@@ -1,4 +1,4 @@
-@import "../setting";  // vendor
+@import "../setting"; //vendor
 
 // reset
 *, ::after, ::before, :after, :before{ 
@@ -22,11 +22,11 @@ body{
 
 a{
   display: inline-block;
-  color: $black-light;
+  color: $main;
   transition: .3s linear all;
   &:hover {
     text-decoration: none;
-    color: $main-light;
+    color: $black;
   }
   &:focus {
     outline: none;

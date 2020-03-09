@@ -26,25 +26,36 @@
     <div class="headerwrap">
         <div class="topbar">
 			<div class="container">
+			<div class="between">
                 <a href="article.php">全館優惠</a>
-				<ul class="toplist d-none d-sm-flex">
-                    <li><a href="about.php"><i class="fas fa-envelope"></i></a></li>
-                    <li><a href="_login.php"><i class="fas fa-user"></i> 會員註冊/登入</a></li>
+				<ul>
+                    <li class="list-inline-item"><a href="about.php"><i class="fas fa-envelope"></i></a></li>
+                    <li class="list-inline-item has_submenu">
+                      <a href="_login.php"><i class="fas fa-user"></i> 會員中心</a>
+                      <ul>
+                        <li><a href="_account.php">會員中心</a></li>
+                        <li><a href="_addresslist.php">地址資訊</a></li>
+                        <li><a href="_edit.php">編輯資料</a></li>
+                        <li><a href="_password.php">變更密碼</a></li>
+                        <li><a href="_orderlist.php">訂單列表</a></li>
+                      </ul>
+                  </li>
                 </ul>
+			</div>
 			</div>
 		</div>
         <header>
             <div class="container">
             <nav class="navbar navbar-expand-lg p-0">
                 <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav mr-0 ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.php">首頁</a>
+                            <a class="nav-link" href="element.php">Elements</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.php">關於我們</a>
