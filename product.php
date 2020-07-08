@@ -22,6 +22,7 @@
                         <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
                       </a> 
                     </div>
+<!--
                     <div class="item"> 
                       <a href="assets/img/demo-product.jpg" class="popup w-100">
                         <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
@@ -37,6 +38,7 @@
                         <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
                       </a> 
                     </div>
+-->
 
                 </div>
                 <div class="thumbs">
@@ -50,6 +52,7 @@
                       <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
                       </a>
                     </div>
+<!--
                     <div class="item">
                       <a href="javascript:void(0);" title="" class="w-100">
                       <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
@@ -65,6 +68,7 @@
                       <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
                       </a>
                     </div>
+-->
                 </div>
                 <div class="mt-3">
                     <p class="text-primary mb-1">促銷活動：</p>
