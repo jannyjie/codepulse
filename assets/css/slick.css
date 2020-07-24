@@ -24,7 +24,6 @@
 
     display: block;
     overflow: hidden;
-
     margin: 0;
     padding: 0;
 }
@@ -53,7 +52,7 @@
     position: relative;
     top: 0;
     left: 0;
-
+    font-size: 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -76,11 +75,14 @@
 
 .slick-slide
 {
+    font-size: 0;
     display: none;
     float: left;
-
     height: 100%;
     min-height: 1px;
+}
+.slick-slide>div>div{
+    font-size: 1rem;
 }
 [dir='rtl'] .slick-slide
 {

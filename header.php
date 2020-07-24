@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
     <title>Codepulse Demo</title>
     <meta charset="UTF-8">
@@ -10,13 +9,19 @@
     <meta name="keywords" content="" />
     <meta name="author" content="Codepulse" />
 
-    <link href="assets/images/favicon.png" rel="shortcut icon" type="image/png">
-
+    <link href="assets/img/fav.png" rel="shortcut icon" type="image/png">
+  
+    <!--  Font family -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,600,700,900|Oswald:400,500,700,900&display=swap" rel="stylesheet" type="text/css">
+  
+    <!--  Plugins -->
     <link href="assets/css/animate.css" rel="stylesheet" type="text/css">
     <link href="assets/css/magnific-popup.css" rel="stylesheet" type="text/css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/fontawesome.all.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/slick.css" rel="stylesheet" type="text/css">
+  
+    <!--  Customized -->
     <link href="assets/css/common.css" rel="stylesheet" type="text/css">
 </head>
     
@@ -26,28 +31,30 @@
     <div class="headerwrap">
         <div class="topbar">
 			<div class="container">
-			<div class="between">
-                <a href="article.php">全館優惠</a>
-				<ul>
-                    <li class="list-inline-item"><a href="about.php"><i class="fas fa-envelope"></i></a></li>
-                    <li class="list-inline-item has_submenu">
-                      <a href="_login.php"><i class="fas fa-user"></i> 會員中心</a>
-                      <ul>
-                        <li><a href="_account.php">會員中心</a></li>
-                        <li><a href="_addresslist.php">地址資訊</a></li>
-                        <li><a href="_edit.php">編輯資料</a></li>
-                        <li><a href="_password.php">變更密碼</a></li>
-                        <li><a href="_orderlist.php">訂單列表</a></li>
-                      </ul>
-                  </li>
-                </ul>
-			</div>
+                <div class="between">
+                    <a href="article.php">全館優惠</a>
+                    <ul>
+                        <li class="list-inline-item"><a href="about.php"><i class="fas fa-envelope"></i></a></li>
+                        <li class="list-inline-item has_submenu">
+                          <a href="login.php"><i class="fas fa-user"></i> 會員中心</a>
+                          <ul>
+                            <li><a href="account.php">會員中心</a></li>
+                            <li><a href="addresslist.php">地址資訊</a></li>
+                            <li><a href="edit.php">編輯資料</a></li>
+                            <li><a href="password.php">變更密碼</a></li>
+                            <li><a href="orderlist.php">訂單列表</a></li>
+                          </ul>
+                      </li>
+                    </ul>
+                </div>
 			</div>
 		</div>
         <header>
             <div class="container">
             <nav class="navbar navbar-expand-lg p-0">
-                <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png"></a>
+                <a class="navbar-brand" href="index.php">
+                  <img src="assets/img/logo.png">
+                </a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                 </button>
@@ -55,25 +62,16 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav mr-0 ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="element.php">Elements</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.php">關於我們</a>
+                            <a class="nav-link" href="sitemap.php">Sitemap</a>
                         </li>
                         <li class="nav-item has_submenu">
                             <a class="nav-link dropdown-toggle" href="category.php" data-toggle="dropdown">
-                                產品
+                                dropdown sample
                             </a>
                             <ul>
                                 <li><a class="dropdown-item" href="category.php">類別1</a></li>
                                 <li><a class="dropdown-item" href="category.php">類別2</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="news.php">最新消息</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.php">聯絡我們</a>
                         </li>
                     </ul>
                 </div>

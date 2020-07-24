@@ -86,15 +86,6 @@
 }
 .mainslider {
   margin: auto;
-  @include res(nb){
-    max-width: 1240px;
-  }
-  @include res(pc){
-    max-width: 1400px;
-  }
-  @include res(xlpc){
-    max-width: 1600px;
-  }
   .slick-arrow{
     opacity: 0.9;
     background: $none;
@@ -106,12 +97,6 @@
     &:hover:before{
       color: $main;
     }
-  }
-  .slick-slide:not(.slick-current) {
-    opacity: .55;
-  }
-  .slick-list {
-    overflow: visible!important;
   }
 }
 .cooperation{
