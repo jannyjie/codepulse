@@ -1,11 +1,4 @@
-@import "../setting";  // vendor
 .headerwrap{
-  a{
-    color: $main;
-    &:hover{
-      color: $second;
-    }
-  }
   .navbar-toggler:not(.collapsed){
     .fa-bars:before{
       content: '\f00d';
@@ -15,10 +8,15 @@
     line-height: 1.5em;
   }
   .navbar-brand{
+    margin-right: 0;
+    max-width: calc(100% - 60px);
     img{
-      max-height: 48px;
-      @include res(xlpad){
-        max-height: 64px;
+      max-height: 45px;
+    }
+    @include res(xlpad){
+      padding: 1rem 0;
+      img{
+        max-height: 60px;
       }
     }
   }
@@ -31,12 +29,8 @@
       width: 100%;
       background: $white;
       box-shadow: $shadow-box;
-      .has_submenu{
-        ul{
-          @include res(xlpad){
-            padding-top: 22px;
-          }
-        }
+      .submenu{
+        padding-top: 10px;
       }
     }
   }
@@ -52,29 +46,37 @@
       color: $main;
     }
   }
+  .submenu{
+    padding-top: 8px;
+    left: auto;
+    right: 0;
+  }
 }
 
 .has_submenu {
   position: relative;
-  &:hover{
-    ul{
-      display: block;
+  @include res(xlpad){
+    &:hover{
+      .submenu{
+        display: block;
+      }
     }
   }
+}
+
+.submenu{
+  display: none;
+  z-index: 2;
+  min-width: 100%;
+  padding-top: 12px;
+  position: absolute;
+  left: 0;
+  top: 100%;
   ul{
-    width: auto;
-    list-style: none;
-    padding: 0;
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    z-index: 10;
-    padding-top: 8px;
     text-align: center;
+    box-shadow: $shadow-box;
     li{
       white-space: nowrap;
-      box-shadow: $shadow-box;
       position: relative;
       background: #fff;
       a{
@@ -86,31 +88,18 @@
           background: $main;
           color: $white;
         }
-        @include res(xlpad){
-          font-size: 1em;
-        }
       }
     }
   }
 }
 
 .navbar-nav{
-  @include res(xlpad,to-mb){
-    max-height: calc(100vh - 70px);
-    overflow-y: scroll;
-  }
   >li{
     >a{
       font-size: 18px;
       letter-spacing: 0.04em;
       font-weight: 500;
-      @include res(xlpad,to-mb){
-        padding: 0.5em 1em;
-        border-bottom: $border;
-        width: 100%;
-      }
       @include res(nb){
-        font-size: 15px;
         padding-right:0!important;
       }
     }
@@ -120,6 +109,21 @@
       }
       @include res(nb){
         margin-right: 3em;
+      }
+    }
+  }
+  @include res(xlpad,to-mb){
+    max-height: calc(100vh - 70px);
+    overflow-y: scroll;
+    .submenu{
+      padding-top: 0;
+      position: static;
+    }
+    >li{
+      >a{
+        padding: 0.5em 1em;
+        border-bottom: $border;
+        width: 100%;
       }
     }
   }

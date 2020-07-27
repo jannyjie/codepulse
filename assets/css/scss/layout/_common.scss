@@ -11,12 +11,22 @@ ul, ol{
   list-style-type: none;
 }
 
-
+// for editor
+.edit-area{
+  ul{
+    list-style: disc;
+  }
+  ol{
+    list-style: decimal;
+  }
+  img{
+    height: auto!important;
+  }
+}
 
 // default
 body{
   margin: 0;
-  font-size: 15px;
   font-family: $font-default;
 }
 
@@ -33,12 +43,7 @@ a{
   }
 }
 
-img{
-  max-width: 100%;
-  height: auto!important;
-}
-
-iframe{
+img, iframe{
   max-width: 100%;
 }
 
@@ -47,14 +52,21 @@ section{
   @include res(xlpad){
     padding: 48px 0;
   }
+  @include res(xlpc){
+    padding: 72px 0;
+  }
 }
 
 input, button, textarea, select{
-  border: 0
+  border: 0;
+  &:focus{
+    outline: none;
+  }
 }
 
 $input-prefix: '::-webkit-input-',':-moz-','::-moz-',':-ms-input-';
 
+// placeholder text color
 @each $i in $input-prefix{
   #{$i}placeholder{
     color: #c5c5c5;
@@ -76,30 +88,32 @@ $input-prefix: '::-webkit-input-',':-moz-','::-moz-',':-ms-input-';
   }
 }
 
-
 .container{
   margin:0 auto;
-  padding: 0 9px;
+  padding: 0 10px;
   width: 100%;
   >.row:not(.no-gutters){
-    margin-left: -9px;
-    margin-right: -9px;
+    margin-left: -10px;
+    margin-right: -10px;
     >div[class^='col-']{
-      padding-left: 9px;
-      padding-right: 9px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
   @include res(pad){
-    max-width: 760px;
+    max-width: 700px;
   }
   @include res(xlpad){
-    max-width: 1000px;
-    &.sm{
-      max-width: 960px;
-    }
+    max-width: 900px;
   }
   @include res(nb){
-    max-width: 1258px;
+    max-width: 1100px;
+  }
+  @include res(pc){
+    max-width: 1200px;
+  }
+  @include res(xlpc){
+    max-width: 1400px;
   }
 }
 
@@ -111,36 +125,26 @@ $input-prefix: '::-webkit-input-',':-moz-','::-moz-',':-ms-input-';
 
 //grids
 .grids-2{
-  @include setgrids(1,10px,[['pad',2,16px]]);
-}
-.grids-2-nogap{
-  @include setgrids(1,0px,[['phone',2,0px]]);
+  @include setgrids(1,10px,[['pad',2,20px]]);
 }
 .grids-3{
-  @include setgrids(1,10px,[['pad',2,12px],['nb',3,12px]]);
+  @include setgrids(1,10px,[['pad',2,20px],['nb',3,30px]]);
 }
 .grids-6{
-  @include setgrids(2,6px,[['pad',3,6px],['xlpad',4,6px],['nb',6,6px]]);
+  @include setgrids(2,6px,[['pad',3],['xlpad',4],['nb',6]]);
 }
-.iframe{
-  @include imgbox(60%,200px);
-  iframe{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
+
 .between{
   @include flexbox(y);
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
+// overwrite slick.css
+
 .slick-arrow{
   opacity: 0.5;
-  background: #a7a7a7;
+  background: $grey;
   padding: 0;
   &:before{
     color: $white;
@@ -151,11 +155,11 @@ $input-prefix: '::-webkit-input-',':-moz-','::-moz-',':-ms-input-';
     box-shadow: $shadow-button;
     opacity: 1;
   }
-  @include res(pc){
-    left: -52px;
+  @include res(nb){
+    left: -50px;
     &.slick-next{
       left: auto;
-      right: -52px;
+      right: -50px;
     }
   }
 }

@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  
+  // init wow animation
     wow = new WOW(
 		{
 			boxClass:     'wow',      
@@ -10,31 +12,38 @@ $(document).ready(function(){
 	)
     wow.init();
     
-    if($(window).width()<768){
-        $('.toggleopen').on('click', function(e) {
-            e.preventDefault();
-            $(this).toggleClass('opened');
-            $(this).next().slideToggle();
-        });
-    }else{
-        var topbottomh = $('.headerwrap').height() + $('.footer').height();
-        $('.pagecont').css('min-height','calc(100vh - '+ topbottomh +'px)');
+  // submenu click function
+    if($(window).width()<992){
+      $('.has_submenu>a').on('click', function(e){
+        e.preventDefault();
+        $(this).siblings('.submenu').slideToggle();
+      })
     }
-    $('.searchtoggle>a,.searchwrap .close').on('click',function(){
-       $('.searchwrap').toggleClass('open'); 
+  
+  // toggleopen click function
+    $('.toggleopen').on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('opened');
+        $(this).next().slideToggle();
     });
+  
+  // set page height  
+    var topbottomh = $('.headerwrap').height() + $('.footer').height();
+    $('.pagecont').css('min-height','calc(100vh - '+ topbottomh +'px)');
+  
+  // home slider setting
     $('.mainslider').slick({
         dots: true,
-        arrows: false,
+        arrows: true,
         autoplay: true,
         autoplaySpeed: 4000,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        fade:true,
         adaptiveHeight: true
     });
     
+  // product gallery slider setting
       var album = $('.gallery');
       var pager = $('.thumbs');
       var picPopup = $('.popup');
@@ -69,16 +78,19 @@ $(document).ready(function(){
           }
         ]
       });
-
+  
+  // pictures popup
       picPopup.magnificPopup({
         type: 'image',
-        tLoading: 'Loading image',
+        tLoading: 'Loading ...',
         gallery: {
           enabled: true,
           navigateByImgClick: true,
           preload: [0,1] // Will preload 0 - before current, and 1 after the current image
         }
       });
+  
+  // scroll functions 
     var menuh = $('header').height();
     $(window).on('scroll',function(){
         if ($(window).scrollTop() > menuh) {

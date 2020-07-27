@@ -36,15 +36,17 @@
                     <ul>
                         <li class="list-inline-item"><a href="about.php"><i class="fas fa-envelope"></i></a></li>
                         <li class="list-inline-item has_submenu">
-                          <a href="login.php"><i class="fas fa-user"></i> 會員中心</a>
-                          <ul>
-                            <li><a href="account.php">會員中心</a></li>
-                            <li><a href="addresslist.php">地址資訊</a></li>
-                            <li><a href="edit.php">編輯資料</a></li>
-                            <li><a href="password.php">變更密碼</a></li>
-                            <li><a href="orderlist.php">訂單列表</a></li>
-                          </ul>
-                      </li>
+                            <a href="login.php"><i class="fas fa-user"></i> 會員中心</a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href="account.php">會員中心</a></li>
+                                    <li><a href="addresslist.php">地址資訊</a></li>
+                                    <li><a href="edit.php">編輯資料</a></li>
+                                    <li><a href="password.php">變更密碼</a></li>
+                                    <li><a href="orderlist.php">訂單列表</a></li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 			</div>
@@ -65,13 +67,15 @@
                             <a class="nav-link" href="sitemap.php">Sitemap</a>
                         </li>
                         <li class="nav-item has_submenu">
-                            <a class="nav-link dropdown-toggle" href="category.php" data-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle" href="category.php">
                                 dropdown sample
                             </a>
-                            <ul>
-                                <li><a class="dropdown-item" href="category.php">類別1</a></li>
-                                <li><a class="dropdown-item" href="category.php">類別2</a></li>
-                            </ul>
+                            <div class="submenu">
+                              <ul>
+                                  <li><a class="dropdown-item" href="category.php">Link 1</a></li>
+                                  <li><a class="dropdown-item" href="category.php">Link 2</a></li>
+                              </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>

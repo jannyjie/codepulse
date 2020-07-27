@@ -38,12 +38,16 @@ $border:solid 1px #c5c5c5;
       $raised: $raised * $base;
     }
   }
-  
   @return $raised;
 }
+
 @function floorD($number, $n:0){
   $p:pow(10, $n);
   @return floor($number * $p) / $p;
+}
+
+@function px2rem($px) {
+  @return floorD($px/16px,2)*1rem;
 }
 
 // margin & padding
@@ -78,6 +82,8 @@ $device: (xlpc:1600px, pc:1440px, nb:1250px, xlpad:992px, pad:768px, phone:360px
 
 
 // utilities
+
+// icon - FontAwesome: https://fontawesome.com/icons?d=gallery&m=free
 @mixin fa{
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -88,6 +94,25 @@ $device: (xlpc:1600px, pc:1440px, nb:1250px, xlpad:992px, pad:768px, phone:360px
   height: $size;
 }
 
+// create customized grids container
+/*
+  for example:
+
+  .grids-3{
+    @include setgrids(3,12px);
+  }
+
+  在.grids-3底下的children會以3個一列，彼此間距為12px
+
+  .grids-4{
+    @include setgrids(2,12px,[[pad,3,16px],[pc,4,20px]]);
+  }
+
+  在.grids-4底下的children在pc以上的裝置會以4個一列，彼此間距為20px
+                         在pad-pc的裝置會以3個一列，彼此間距為16px
+                         在pad以下的裝置會以2個一列，彼此間距為12px
+  
+*/
 @mixin setgrids($number, $gap, $res: ((device:'xlpc'),(res-number:'2'),(res-gap:$gap))){
   $grid-width: 100%;
   $calcgap: false;
@@ -121,7 +146,7 @@ $device: (xlpc:1600px, pc:1440px, nb:1250px, xlpad:992px, pad:768px, phone:360px
       @each $i in $res{
         $r-dev: nth($i,1);
         $r-num: nth($i,2);
-        $r-gap: nth($i,3);
+        $r-gap: if( length($i)>2 , nth($i,3) , $gap );
         @include res($r-dev){
           $r-calcperc: floorD(100/$r-num,2)*1%;
           $r-calcgap: $r-gap*($r-num - 1)/$r-num;
