@@ -38,9 +38,35 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 4000,
         infinite: true,
-        speed: 300,
+        speed: 500,
         slidesToShow: 1,
         adaptiveHeight: true
+    });
+
+  // normal slider
+    $('.slider-col-3').slick({
+        dots: false,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        infinite: true,
+        speed: 200,
+        slidesToShow: 3,
+        adaptiveHeight: true,
+        responsive:[
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+        ]
     });
     
   // product gallery slider setting

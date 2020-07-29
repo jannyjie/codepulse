@@ -36,6 +36,11 @@
     font-size: 20px;
   }
 }
+/* text */
+.text{
+  line-height: 1.65;
+  font-size: 15px;
+}
 
 /* price */
 .price{
@@ -89,13 +94,13 @@
 }
 
 .btn-main{
-  border: 1px solid $white;
-  background: $second;
+  border: 1px solid $main;
+  background: $main;
   box-shadow: $shadow-button;
   color: $white;
   &:hover{
-    background: $main;
-    color: $white;
+    background: $none;
+    color: $main;
   }
 }
 
@@ -264,6 +269,21 @@
     }
   }
 }
+
+// slider
+.slider-col-3{
+  margin-left: -10px;
+  margin-right: -10px;
+  .item{
+    padding: 10px 10px 15px;
+    &:hover{
+      .card{
+        box-shadow: $shadow-box;
+      }
+    }
+  }
+}
+
 // form
 select, input, textarea{
   padding: 5px 10px;
