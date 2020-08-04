@@ -32,3 +32,4 @@ _ReSharper*/
 packages/
 temp/
 .sass-cache/
+.vscode
