@@ -1,7 +1,41 @@
-.box-msg{
-  background: transparentize($main,0.92);
-  padding: 30px;
-  @include res(xlpad){
-    padding: 40px;
+.list-faq{
+  .item{
+    margin-bottom: 1.5em;
+    h5{
+      position: relative;
+      padding-right: 30px;
+      padding-left: 0.5em;
+      border-bottom: 1px solid $grey;
+      cursor: pointer;
+      padding-bottom: 8px;
+      font-size: 17px;
+      @include res(xlpad){
+        font-size: 19px;
+      }
+      &:after{
+        @include fa;
+        content: '\f0d7';
+        font-size: 16px; position: absolute;right: 0;line-height: 24px;transition: .2s ease all;
+      }
+      &.opened{
+        border-color: $none;
+        color: $second;
+        &:after{
+          transform: rotate(180deg)
+        }
+      }
+    }
+    .ans{
+      background: #f1f1f1;
+      border-radius: 8px;
+      display: none;
+      padding: 10px 20px;
+      >*:last-child{
+        margin-bottom: 0;
+      }
+      @include res(xlpad){
+        padding: 20px 30px;
+      }
+    }
   }
 }

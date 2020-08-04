@@ -36,6 +36,22 @@
     font-size: 20px;
   }
 }
+.border-under-title{
+  display: block;
+  margin: 0.5em 0;
+  width: 40px;
+  height: 2px;
+  background: $black;
+  &.sm{
+    width: 30px;
+  }
+  @include res(pad){
+    width: 46px;
+    &.sm{
+      width: 38px;
+    }
+  }
+}
 /* text */
 .text{
   line-height: 1.65;
@@ -89,7 +105,7 @@
   @include res(xlpad){
     font-size: 16px;
     min-width: 120px;
-    padding: 0.75em 2em;
+    padding: 0.5em 2em;
   }
 }
 
@@ -107,7 +123,7 @@
 .btn-white{
   background: $white;
   border-radius: 30px;
-  color: $grey;
+  color: $black;
   &:hover{
     background: $second;
     color: #fff;
@@ -164,11 +180,12 @@
       font-weight: bold;
       color: $main;
       &:hover,:focus{
-        box-shadow: 0 0 3px 0 $main;
+        border: 1px solid $main;
       }
       &.active{
         box-shadow: $shadow-button;
-        color: $main;
+        background: $main;
+        color: $white;
       }
     }
   }
@@ -245,6 +262,33 @@
   }
 }
 
+.banner{
+  @include imgbox(31.25%, 200px); //1920 * 600px, min-height: 200px
+  .content{
+    @include overlay($none);
+    @include flexbox(center);
+    text-align: center;
+    h2{
+      text-shadow: $shadow-text;
+      letter-spacing: 0.01em;
+      color: #fff;
+      font-size: px2rem(36px);
+      margin-bottom: 0.5em;
+      @include res(pad){
+        font-size: px2rem(48px);
+      }
+      @include res(nb){
+        font-size: px2rem(62px);
+      }
+    }
+  }
+  &.banner-page{
+    &:before{
+      padding-bottom: 20.83%; // 1920*400px
+    }
+  }
+}
+
 .box-qty{
   input{
     display: inline-block;
@@ -267,6 +311,14 @@
       background: $white;
       color: $grey;
     }
+  }
+}
+
+.box-msg{
+  background: transparentize($main,0.92);
+  padding: 30px;
+  @include res(xlpad){
+    padding: 40px;
   }
 }
 

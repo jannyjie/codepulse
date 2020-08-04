@@ -4,7 +4,7 @@
     <div class="mainslider">
       <? for($i=0;$i<3;$i++): ?>
       <div class="item">
-          <div class="bigbanner" style="background-image:url('assets/img/pic-banner.png')">
+          <div class="banner" style="background-image:url('assets/img/pic-banner.png')">
               <div class="content wow animated fadeIn">
                   <div class="container">
                       <h2>標題</h2>

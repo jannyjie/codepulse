@@ -1,0 +1,28 @@
+.list-contact-info{
+  li{
+    position: relative;
+    padding-left: 2rem;
+    line-height: 1.75rem;
+    color: $black;
+    &:not(:last-child){
+      border-bottom: 1px solid #e2e2e2;
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    i{
+      font-size: 1.25rem;
+      width: 1.75rem;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      line-height: 1.75rem;
+      color: $main;
+    }
+    >a{
+      color: $black;
+      &:hover{
+        color: $main;
+      }
+    }
+  }
+}

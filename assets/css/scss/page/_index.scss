@@ -1,24 +1,3 @@
-.bigbanner{
-  @include imgbox(31.25%, 200px); //1920 * 600px, min-height: 200px
-  .content{
-    @include overlay($none);
-    @include flexbox(center);
-    text-align: center;
-    h2{
-      text-shadow: $shadow-text;
-      letter-spacing: 0.01em;
-      color: #fff;
-      font-size: px2rem(36px);
-      margin-bottom: 0.5em;
-      @include res(pad){
-        font-size: px2rem(48px);
-      }
-      @include res(nb){
-        font-size: px2rem(62px);
-      }
-    }
-  }
-}
 .slidersec{
   padding: 0;
   width: 100%;
