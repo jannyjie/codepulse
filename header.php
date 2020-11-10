@@ -20,7 +20,10 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/fontawesome.all.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/slick.css" rel="stylesheet" type="text/css">
-  
+    <!-- Plugins for vendors.php -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.css" integrity="sha512-bsNktdxsLu4ooy7axuzyyFz87SWrDBaCmZsk2Dvin1/2noq49vt1jfNWUAfdybRpFCzRjdWygAOEopdbo8cGpA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+
     <!--  Customized -->
     <link href="assets/css/common.css" rel="stylesheet" type="text/css">
 </head>
