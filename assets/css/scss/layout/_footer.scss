@@ -4,23 +4,24 @@
   padding-top: 30px;
   font-size: 14px;
   line-height: 2em;
+
   @include res(xlpad){
     padding-top: 42px;
   }
-  a{
+
+  a {
     color: $grey;
-    &:hover{
-      color: $main;
-    }
+    &:hover{ color: $main; }
   }
-  h5{
+
+  h5 {
     color: $grey;
     font-weight: bold;
     font-size: 18px;
   }
 }
 
-.copyright{
+.copyright {
   font-size: 12px;
   margin: 0;
   background: $main;
@@ -29,7 +30,7 @@
   color: transparentize($white,0.4);
 }
 
-.scrollToTop{
+.scrollToTop {
   position: fixed;
   right: 20px;
   bottom: 20px;

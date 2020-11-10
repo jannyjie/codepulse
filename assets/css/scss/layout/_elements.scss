@@ -67,34 +67,35 @@
     color: $red;
   }
 }
-/* textbox */
-.txt-l1{
-  @include textbox(1)
-}
-.txt-l2{
-  @include textbox(2)
-}
-.txt-l3{
-  @include textbox(3)
-}
 
-// bg
-.bgcover{
+/* textbox: 限制文字最大行數 */
+.txt-l1{ @include textbox(1); }
+.txt-l2{ @include textbox(2); }
+.txt-l3{ @include textbox(3); }
+
+/* text color */
+.text-main  { color: $main !important; }
+.text-grey  { color: $grey !important; }
+.text-light { color: $light !important; }
+.text-white { color: $white !important; }
+.text-black { color: $black !important; }
+
+/* background color */
+.bg-main  { background: $main !important; }
+.bg-grey  { background: $grey !important; }
+.bg-light { background: $light !important; }
+.bg-white { background: $white !important; }
+.bg-black { background: $black !important; }
+
+/* background - center & cover */
+.bg-cover{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.bg-main{
-  background: $main!important
-}
 
-.bg-light{
-  background: $light!important
-}
-
-
-// button
+/* button */
 .btn{
   text-align: center;
   font-size: 14px;
@@ -108,6 +109,9 @@
     padding: 0.5em 2em;
   }
 }
+
+/* 圓角按鈕 */
+.btn-pill { border-radius: 50px;}
 
 .btn-main{
   border: 1px solid $main;
@@ -130,19 +134,27 @@
   }
 }
 
-.btn-line{color: $white; background: $brand-line;
+.btn-line{
+  color: $white;
+  background: $brand-line;
   &:hover{
-    background: transparentize($brand-line,0.4); 
+    background: rgba($brand-line,0.4);
   }
 }
-.btn-facebook{color: $white; background: $brand-facebook;
+
+.btn-facebook{
+  color: $white;
+  background: $brand-facebook;
   &:hover{
-    background: transparentize($brand-facebook,0.4); 
+    background: rgba($brand-facebook,0.4);
   }
 }
-.btn-google{color: $white; background: $brand-google;
+
+.btn-google{
+  color: $white;
+  background: $brand-google;
   &:hover{
-    background: transparentize($brand-google,0.4); 
+    background: rgba($brand-google,0.4); 
   }
 }
 
@@ -161,10 +173,9 @@
 }
 
 // list
-.list-inline-item{
-  vertical-align:middle;
-}
+.list-inline-item{ vertical-align:middle; }
 
+// 分頁按鈕 (Pagination)
 .list-page{
   >li{
     display: inline-block;
@@ -222,7 +233,7 @@
     max-height: 65px;
   }
 }
-
+// Image 固定寬高比
 .box-img{
   @include imgbox(100%);
   &.r-4-3{
@@ -245,6 +256,7 @@
   }
 }
 
+/* Iframe 影片樣式 */
 .box-iframe{
   position: relative;
   &:before{
@@ -262,6 +274,7 @@
   }
 }
 
+/* banner 大圖: 寬高比 (1920 * 600) */
 .banner{
   @include imgbox(31.25%, 200px); //1920 * 600px, min-height: 200px
   .content{
@@ -322,7 +335,7 @@
   }
 }
 
-// slider
+/* 三欄式的輪播投影片 */
 .slider-col-3{
   margin-left: -10px;
   margin-right: -10px;
@@ -346,6 +359,7 @@ select, input, textarea{
     background: #e8e8e8;
   }
 }
+
 label.checkbox{
   margin-bottom: 0;
   cursor: pointer;
@@ -438,7 +452,32 @@ label.checkbox{
   }
 }
 
+// 表單驗證文字
 .text-danger{
   color: $red;
   font-size: 0.875em;
+}
+
+
+// for editor
+// 若串接後台編輯器 (例如: article.php)
+.edit-area{
+  ul{
+    padding-left: 1.5em;
+    list-style: disc;
+  }
+  ol{
+    padding-left: 1.5em;
+    list-style: decimal;
+  }
+  img{
+    height: auto!important;
+  }
+}
+
+// flex-box 垂直置中, 水平為 space-between
+.flex-between {
+  @include flexbox(y);
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

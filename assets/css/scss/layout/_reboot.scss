@@ -1,6 +1,7 @@
 @import "../setting"; //vendor
-
-// reset
+// ---
+// Reboot
+// ---
 *, ::after, ::before, :after, :before{ 
   box-sizing: border-box;
 }
@@ -9,21 +10,6 @@ ul, ol{
   padding: 0; 
   margin: 0; 
   list-style-type: none;
-}
-
-// for editor
-.edit-area{
-  ul{
-    padding-left: 1.5em;
-    list-style: disc;
-  }
-  ol{
-    padding-left: 1.5em;
-    list-style: decimal;
-  }
-  img{
-    height: auto!important;
-  }
 }
 
 // default
@@ -48,7 +34,7 @@ a{
 img, iframe{
   max-width: 100%;
 }
-
+// section 預設 padding
 section{
   padding: 30px 0;
   @include res(xlpad){
@@ -68,7 +54,7 @@ input, button, textarea, select{
 
 $input-prefix: '::-webkit-input-',':-moz-','::-moz-',':-ms-input-';
 
-// placeholder text color
+// placeholder 顏色
 @each $i in $input-prefix{
   #{$i}placeholder{
     color: #c5c5c5;
@@ -90,59 +76,14 @@ $input-prefix: '::-webkit-input-',':-moz-','::-moz-',':-ms-input-';
   }
 }
 
-.container{
-  margin:0 auto;
-  padding: 0 10px;
-  width: 100%;
-  >.row:not(.no-gutters){
-    margin-left: -10px;
-    margin-right: -10px;
-    >div[class^='col-']{
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-  @include res(pad){
-    max-width: 700px;
-  }
-  @include res(xlpad){
-    max-width: 900px;
-  }
-  @include res(nb){
-    max-width: 1100px;
-  }
-  @include res(pc){
-    max-width: 1200px;
-  }
-  @include res(xlpc){
-    max-width: 1400px;
-  }
-}
-
 .breadcrumb{
   padding: 0;
   background: $none;
   font-size: 0.875em;
 }
 
-//grids
-.grids-2{
-  @include setgrids(1,10px,[['pad',2,20px]]);
-}
-.grids-3{
-  @include setgrids(1,10px,[['pad',2,20px],['nb',3,30px]]);
-}
-.grids-6{
-  @include setgrids(2,6px,[['pad',3],['xlpad',4],['nb',6]]);
-}
 
-.between{
-  @include flexbox(y);
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-// overwrite slick.css
+// 覆寫 slick.css 箭頭按鈕
 
 .slick-arrow{
   opacity: 0.5;
