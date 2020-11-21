@@ -5,25 +5,22 @@
   border-radius: 6px;
   padding: 30px 20px 30px;
   position: relative;
+
   .pagetitle{
     h1{
       font-size: 2em;
       margin-bottom: 0;
     }
   }
-  select,input,textarea{
-    border: 0;
-  }
-  select{
-    height: 34px;
-  }
-  label.checkbox input+span:before{
-    background: $white;
-  }
+  select,input,textarea{ border: 0; }
+  select{ height: 34px; }
+
+  label.checkbox input+span:before{ background: $white; }
   &.sm{
     max-width: 480px;
   }
 }
+
 .social_login{
   .btn{
     min-width: auto;
@@ -41,9 +38,13 @@
       font-size: 36px;
       color: $white;
       box-shadow: $shadow-button;
+
+      // 微調 font awesome icon 位置，讓“視覺上”垂直置中
+      &:before { margin-top: 0.05em; }
+
       @include res(xlpad){
         @include square(90px);
-        font-size:48px;
+        font-size:44px;
       }
     }
     h4{
