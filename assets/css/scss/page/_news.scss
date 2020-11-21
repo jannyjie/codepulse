@@ -32,3 +32,15 @@
   color: $grey;
   font-size: 14px;
 }
+
+
+.card.card-news {
+  .box-img {
+    @include imgbox(75%, 200px)
+  }
+  @include res(xlpad) {
+    max-width: none;
+    flex-direction: row;
+    .box-img { width: 16rem; }
+  }
+}

@@ -34,7 +34,7 @@
     <div class="headerwrap">
         <div class="topbar">
 			<div class="container">
-                <div class="between">
+                <div class="flex-between">
                     <a href="article.php">全館優惠</a>
                     <ul>
                         <li class="list-inline-item"><a href="about.php"><i class="fas fa-envelope"></i></a></li>
