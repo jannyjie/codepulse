@@ -21,7 +21,7 @@
 }
 
 // text
-/* title */
+
 .title-sec {
   font-size: 28px;
   letter-spacing: 0.02em;
@@ -73,7 +73,8 @@
 .txt-l2{ @include textbox(2); }
 .txt-l3{ @include textbox(3); }
 
-/* text color */
+/* text color */
+
 .text-main  { color: $main !important; }
 .text-grey  { color: $grey !important; }
 .text-light { color: $light !important; }

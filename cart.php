@@ -101,7 +101,7 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <a class="btn btn-light" href="member.php">繼續購物</a>
+                        <a class="btn btn-light" href="account.php">繼續購物</a>
                     </div>
                     <div class="col-6 text-right">
                         <a class="btn btn-add" href="checkout.php">結帳</a>
