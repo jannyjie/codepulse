@@ -16,7 +16,7 @@
           <div class="text-center py-3">
             <img src="assets/img/pic-banner.png">
           </div>
-          <div class="description mt-4 mb-4">
+          <div class="edit-area mt-4 mb-4">
             <p>文章內文</p>
             <p>文章內文</p>
             <p>文章內文</p>
@@ -35,3 +35,8 @@
   </section>
 </div>
 <?php include('footer.php'); ?>
+<script>
+ $(function() {
+   $('.edit-area table').wrap('<div class="table-responsive"></div>')
+ })
+</script>
