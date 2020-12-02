@@ -6,6 +6,8 @@
   box-sizing: border-box;
 }
 
+
+
 ul, ol{
   padding: 0; 
   margin: 0; 
@@ -44,8 +46,12 @@ section{
     padding: 72px 0;
   }
 }
+// prevent Chrome default focus black outline
+a:focus {
+  outline: none;
+}
 
-input, button, textarea, select{
+input, button, textarea, select {
   border: 0;
   &:focus{
     outline: none;
