@@ -8,6 +8,11 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="Codepulse" />
+    <!-- 防瀏覽器快取 -->
+    <meta http-equiv="expires" content="0">
+    <!-- ​​Pragma (cache模式) -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
 
     <link href="assets/img/fav.png" rel="shortcut icon" type="image/png">
   
@@ -25,7 +30,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
 
     <!--  Customized -->
-    <link href="assets/css/common.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/common.css?t=<?=time()?>" rel="stylesheet" type="text/css">
 </head>
     
 <?php include('data.php'); /*Demo用*/ ?>

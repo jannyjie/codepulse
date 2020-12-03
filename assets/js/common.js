@@ -117,7 +117,7 @@ $(document).ready(function(){
       });
   
   // scroll functions 
-    var menuh = $('header').height();
+    var menuh = $('.topbar').outerHeight();
     $(window).on('scroll',function(){
         if ($(window).scrollTop() > menuh) {
             $('.headerwrap').addClass('fixed');

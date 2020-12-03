@@ -14,7 +14,7 @@
             <div class="col-lg-6 offset-lg-3">
                 <div class="box mt-lg-3 mt-0">
                     <div class="pagetitle text-center"><h1>變更密碼</h1></div>
-                    <form action="member.php">
+                    <form action="account.php">
                         <div class="item">
                             <label>原密碼</label>
                             <input type="password"/>
@@ -29,7 +29,7 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <a class="btn btn-light" href="member.php">返回</a>
+                                <a class="btn btn-light" href="account.php">返回</a>
                             </div>
                             <div class="col-6 text-right">
                                 <button class="btn btn-add">確認</button>

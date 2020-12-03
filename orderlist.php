@@ -53,7 +53,7 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <a class="btn btn-light" href="member.php">返回</a>
+                        <a class="btn btn-light" href="account.php">返回</a>
                     </div>
                 </div>
             </div>
