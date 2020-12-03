@@ -12,7 +12,7 @@
     <div class="container pb-lg-5 pb-4">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
-                <div class="box mt-lg-3 mt-0">
+                <div class="form-box mt-lg-3 mt-0">
                     <div class="pagetitle text-center"><h1>會員資料</h1></div>
                     <form action="member.php">
                         <div class="item">
@@ -49,12 +49,14 @@
                         </div>
                         <div class="item">
                             <label class="mr-4">性別</label>
-                            <label class="radiowrap">
-                                <input type="radio" name="gender" value="m"> <span>男</span>
-                            </label>
-                            <label class="radiowrap">
-                                <input type="radio" name="gender" value="f"> <span>女</span>
-                            </label>
+                            <div class="form-group">
+                                <label class="radiowrap">
+                                    <input type="radio" name="gender" value="m"><span>男</span>
+                                </label>
+                                <label class="radiowrap">
+                                    <input type="radio" name="gender" value="f"><span>女</span>
+                                </label>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-6">

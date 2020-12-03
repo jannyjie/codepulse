@@ -802,18 +802,48 @@ label.checkbox input + span:after {
 label.checkbox input:checked + span:after {
   opacity: 1 !important;
 }
-label.checkbox.radio input + span:before {
-  border-radius: 50%;
+
+label.radiowrap {
+  margin-right: 0.75em;
 }
-label.checkbox.radio input + span:after {
+label.radiowrap input {
+  position: absolute;
+  visibility: hidden;
+  width: auto;
+}
+label.radiowrap input + span {
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+label.radiowrap input + span:before, label.radiowrap input + span:after {
+  content: "";
+  position: absolute;
   border-radius: 50%;
-  background: #2d83a7;
+  transition: 0.1s linear all;
+}
+label.radiowrap input + span:before {
+  background: #eee;
+  width: 16px;
+  height: 16px;
   left: 5px;
-  top: 5px;
+  top: calc((24px - 16px) / 2);
+}
+label.radiowrap input + span:after {
+  width: 6px;
+  height: 6px;
+  left: calc(5px + 5px);
+  top: calc((24px - 6px) / 2);
+  background: #fff;
   opacity: 0;
-  border: 0;
-  width: 10px;
-  height: 10px;
+}
+label.radiowrap input:checked + span:before {
+  background: #2d83a7;
+}
+label.radiowrap input:checked + span:after {
+  opacity: 1 !important;
 }
 
 .form-item {
@@ -1209,25 +1239,15 @@ label.checkbox.radio input + span:after {
 }
 
 .form-box {
-  max-width: 800px;
-  margin: auto;
-  background: #f4f8fa;
   border-radius: 6px;
   padding: 30px 20px 30px;
-  position: relative;
 }
 .form-box .pagetitle h1 {
   font-size: 2em;
   margin-bottom: 0;
 }
-.form-box select, .form-box input, .form-box textarea {
-  border: 0;
-}
 .form-box select {
   height: 34px;
-}
-.form-box label.checkbox input + span:before {
-  background: #fff;
 }
 .form-box.sm {
   max-width: 480px;
@@ -1318,11 +1338,6 @@ label.checkbox.radio input + span:after {
 }
 .links .btn:hover {
   opacity: 0.75;
-}
-.links .btn-main {
-  background: transparent;
-  color: #2d83a7;
-  border: 0;
 }
 .links .btn-link {
   color: #2c2c2c;
