@@ -12,16 +12,18 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
                 <div class="mt-lg-3 mt-0">
-                  <div class="title-page">
-                    <h1>會員中心
-                    <span>Member</span></h1>
-                  </div>
+                    <div class="title-page">
+                        <h1>會員中心
+                        <span>Member</span>
+                        </h1>
+                    </div>
                     <div class="row no-gutters member-func">
                         <div class="col-12 text-right mb-3">
-                            <a href="_logout.php">
+                            <a href="logout.php">
                                 <i class="fas fa-sign-out-alt"></i> 會員登出
                             </a>
                         </div>
+
                         <div class="col-6 col-lg-4">
                             <div class="card">
                                 <a href="_edit.php">
