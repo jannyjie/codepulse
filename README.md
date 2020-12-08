@@ -1,11 +1,12 @@
-<!--
- * @Author: Mindy Huang
- * @Date: 2020-11-10 23:18:19
- * @LastEditors: Mindy Huang
- * @LastEditTime: 2020-11-10 23:36:37
- * @Description: 
--->
 # Change Log
+v1.0.2
+- 修正壞掉的頁面 (cart)
+- 新增 CSS: input radio - register.php
+- 新增 CSS: .rwd-table (響應式表格) - cart.php
+- 新增按鈕點擊效果 - wave-effect
+- 修正 article.php - 防止表格 在手機板超出版面
+- 更新 header.php - 防止瀏覽器快取
+
 v1.0.1
  - 新增 CSS： .text-[color], .bg-[color], .btn-pill (膠囊按鈕)
  - 更新檔案結構 scss/layout/
