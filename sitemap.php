@@ -6,6 +6,13 @@
       <li class="breadcrumb-item active"><a href="sitemap.php">網站地圖</a></li>
     </ol>
     <div class="row">
+    <div class="col-12 mb-5">
+        <h3>Document</h3>
+        <ul>
+          <li><a href="vendors.php">套件 Vendors (Select2, Node-Waves)</a></li>
+          <li><a href="element.php">常用元素 Element</a></li>
+        </ul>
+      </div>
       <div class="col-sm-6 col-md-4 col-lg-3">
         <h3>About</h3>
         <ul>
@@ -57,6 +64,7 @@
           <li><a href="maintenance.php">維護 Maintenance</a></li>
         </ul>
       </div>
+      
     </div>
   </div>
 </div>

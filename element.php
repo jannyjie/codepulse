@@ -91,13 +91,27 @@
           <label class="checkbox">
             <input type="checkbox">
             <span>Checkbox</span>
-          </label><br>
+          </label>
+
+          <br><br>
+
           <label class="checkbox radio">
             <input type="radio" name="radio">
             <span>Radio 1</span>
           </label>
           <label class="checkbox radio">
             <input type="radio" name="radio">
+            <span>Radio 2</span>
+          </label>
+
+          <br><br>
+
+          <label class="radiowrap">
+            <input type="radio" name="radio_style2" value="m">
+            <span>Radio 1</span>
+          </label>
+          <label class="radiowrap">
+            <input type="radio" name="radio_style2" value="f">
             <span>Radio 2</span>
           </label>
         </div>
