@@ -75,7 +75,7 @@
                                     </div>
                                 </div>
                                 <div class="item">
-                                    <label class="checkwrap">
+                                    <label class="checkbox">
                                         <input type="checkbox">
                                         <span>我已經閱讀並同意 <a href="info.php">網站服務條款</a></span>
                                     </label>

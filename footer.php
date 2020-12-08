@@ -43,6 +43,7 @@
         <script src="assets/js/jquery.slick-1.9.0.min.js"></script>
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/jquery.magnificpopup-1.1.0.min.js"></script>
+        <script src="assets/js/waves-0.7.6.min.js"></script>
         <script src="assets/js/common.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {

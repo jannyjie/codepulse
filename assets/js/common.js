@@ -12,6 +12,13 @@ $(document).ready(function(){
 	)
     wow.init();
     
+    
+  // node-waves animation
+  if (Waves) {
+    Waves.init({ duration: 1000 })
+    Waves.attach('.btn', ['waves-float']);
+  }
+
   // submenu click function
     if($(window).width()<992){
       $('.has_submenu>a').on('click', function(e){
