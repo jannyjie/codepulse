@@ -63,7 +63,7 @@
                                 <a class="btn btn-light" href="account.php">返回</a>
                             </div>
                             <div class="col-6 text-right">
-                                <button class="btn btn-add">確認</button>
+                                <button class="btn btn-main">確認</button>
                             </div>
                         </div>
                     </form>

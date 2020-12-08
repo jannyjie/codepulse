@@ -152,7 +152,7 @@
                         <li><span>商品小計</span>$998</li>
                         <li><span>郵寄/宅配運費</span>$60</li>
                         <li><span>免運費</span>$-60</li>
-                        <li><span>訂單總計</span><b class="text-primary">$998</b></li>
+                        <li><span>訂單總計</span><b class="text-main">$998</b></li>
                     </ul>
                     <hr>
                     <div class="text-right">
@@ -162,7 +162,7 @@
                                 <span>我已經閱讀並同意 <a href="info.php">購物須知</a></span>
                             </label>
                         </div>
-                        <button type="submit" class="btn btn-primary">結帳</button>
+                        <button type="submit" class="btn btn-main">結帳</button>
                     </div>
                 </form>
             </div>

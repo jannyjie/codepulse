@@ -25,7 +25,7 @@
                                 <span class="gap">|</span> 
                                 共2件，總計NT$6,300 
                             </a>
-                            <a href="orderinfo.php" class="text-primary">處理中</a>
+                            <a href="orderinfo.php" class="text-main">處理中</a>
                         </li>
                         <li>
                             <a href="orderinfo.php">
@@ -36,7 +36,7 @@
                                 <span class="gap">|</span> 
                                 共2件，總計NT$6,300 
                             </a>
-                            <a href="orderinfo.php" class="text-primary">已出貨</a>
+                            <a href="orderinfo.php" class="text-main">已出貨</a>
                         </li>
                         <li>
                             <a href="orderinfo.php">
@@ -47,7 +47,7 @@
                                 <span class="gap">|</span> 
                                 共2件，總計NT$6,300 
                             </a>
-                            <a href="orderinfo.php" class="text-primary">交易取消</a>
+                            <a href="orderinfo.php" class="text-main">交易取消</a>
                         </li>
                     </ul>
                 </div>

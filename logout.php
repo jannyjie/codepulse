@@ -14,7 +14,7 @@
             <div class="box mt-lg-3 mt-0 text-center">
                 <div class="pagetitle"><h1>會員登出</h1></div>
                 <p>您已成功登出了您的帳號。 可以安全離開電腦了。</p>
-                <a href="index.php" class="btn btn-primary mt-3">回首頁</a>
+                <a href="index.php" class="btn btn-main mt-3">回首頁</a>
             </div>
             </div>
         </div>

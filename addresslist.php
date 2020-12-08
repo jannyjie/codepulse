@@ -19,21 +19,21 @@
                         <li>
                             <a href="_addressform.php"><span class="badge badge-secondary">預設</span> 張富山, 台灣, 台北市內湖區 114, 麗山街364巷2號</a>
                             <div class="links">
-                                <a href="_addressform.php" class="text-primary"><i class="fas fa-edit"></i></a>
+                                <a href="_addressform.php" class="text-main"><i class="fas fa-edit"></i></a>
                                 <a href="#" class="text-secondary"><i class="fas fa-trash-alt"></i></a>
                             </div>
                         </li>
                         <li>
                             <a href="_addressform.php">吳小學, 台灣, 台北市大安區 106, 羅斯福路三段191號3樓</a>
                             <div class="links">
-                                <a href="addressform.php" class="text-primary"><i class="fas fa-edit"></i></a>
+                                <a href="addressform.php" class="text-main"><i class="fas fa-edit"></i></a>
                                 <a href="#" class="text-secondary"><i class="fas fa-trash-alt"></i></a>
                             </div>
                         </li>
                         <li>
                             <a href="_addressform.php">王小力, 台灣, 台北市大安區 106, 羅斯福路三段191號1樓</a>
                             <div class="links">
-                                <a href="addressform.php" class="text-primary"><i class="fas fa-edit"></i></a>
+                                <a href="addressform.php" class="text-main"><i class="fas fa-edit"></i></a>
                                 <a href="#" class="text-secondary"><i class="fas fa-trash-alt"></i></a>
                             </div>
                         </li>
@@ -44,7 +44,7 @@
                         <a class="btn btn-light" href="_account.php">返回</a>
                     </div>
                     <div class="col-6 text-right">
-                        <a class="btn btn-add" href="_addressform.php"><i class="fas fa-plus"></i> 新地址</a>
+                        <a class="btn btn-main" href="_addressform.php"><i class="fas fa-plus"></i> 新地址</a>
                     </div>
                 </div>
             </div>

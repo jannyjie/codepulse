@@ -88,7 +88,7 @@
                         <li><span>商品小計</span>$998</li>
                         <li><span>郵寄/宅配運費</span>$60</li>
                         <li><span>免運費</span>$-60</li>
-                        <li><span>訂單總計</span><b class="text-primary">$998</b></li>
+                        <li><span>訂單總計</span><b class="text-main">$998</b></li>
                     </ul>
                     </div>
                 </div>

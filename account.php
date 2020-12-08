@@ -26,7 +26,7 @@
 
                         <div class="col-6 col-lg-4">
                             <div class="card">
-                                <a href="_edit.php">
+                                <a href="edit.php">
                                     <i class="fas fa-id-card"></i>
                                     <h4>會員資料</h4>
                                 </a>
@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-6 col-lg-4">
                             <div class="card">
-                                <a href="_password.php">
+                                <a href="password.php">
                                     <i class="fas fa-shield-alt"></i>
                                     <h4>變更密碼</h4>
                                 </a>
@@ -42,7 +42,7 @@
                         </div>
                         <div class="col-6 col-lg-4">
                             <div class="card">
-                                <a href="_addresslist.php">
+                                <a href="addresslist.php">
                                     <i class="fas fa-address-book"></i>
                                     <h4>地址簿</h4>
                                 </a>
@@ -50,7 +50,7 @@
                         </div>
                         <div class="col-6 col-lg-4">
                             <div class="card">
-                                <a href="_orderlist.php">
+                                <a href="orderlist.php">
                                     <i class="fas fa-shopping-bag"></i>
                                     <h4>訂單記錄</h4>
                                 </a>
@@ -58,7 +58,7 @@
                         </div>
                         <div class="col-6 col-lg-4">
                             <div class="card">
-                                <a href="_wishlist.php">
+                                <a href="wishlist.php">
                                     <i class="fas fa-heart"></i>
                                     <h4>收藏清單</h4>
                                 </a>
@@ -66,7 +66,7 @@
                         </div>
                         <div class="col-6 col-lg-4">
                             <div class="card">
-                                <a href="_point.php">
+                                <a href="point.php">
                                     <i class="fas fa-hand-holding-usd"></i>
                                     <h4>購物金記錄</h4>
                                 </a>

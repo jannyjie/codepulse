@@ -1,17 +1,18 @@
 // icon
-.i-arrow-r{
+.i-arrow-r {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  transition: .1s linear all;
-  &:before,&:after{
-    content: '';
+  transition: 0.1s linear all;
+  &:before,
+  &:after {
+    content: "";
     display: block;
     width: 21px;
     background: #fff;
     height: 1px;
   }
-  &:after{
+  &:after {
     width: 8px;
     position: relative;
     left: calc(100% - 8px);
@@ -26,84 +27,109 @@
   font-size: 28px;
   letter-spacing: 0.02em;
   margin-bottom: 0.5em;
-  @include res(pad){
+  @include res(pad) {
     font-size: 38px;
   }
 }
-.title-card{
+.title-card {
   font-size: 18px;
-  @include res(pad){
+  @include res(pad) {
     font-size: 20px;
   }
 }
-.border-under-title{
+.border-under-title {
   display: block;
   margin: 0.5em 0;
   width: 40px;
   height: 2px;
   background: $black;
-  &.sm{
+  &.sm {
     width: 30px;
   }
-  @include res(pad){
+  @include res(pad) {
     width: 46px;
-    &.sm{
+    &.sm {
       width: 38px;
     }
   }
 }
 /* text */
-.text{
+.text {
   line-height: 1.65;
   font-size: 15px;
 }
 
 /* price */
-.price{
+.price {
   color: $black;
   font-weight: bold;
-  &.special{
+  &.special {
     font-size: 1.4em;
     color: $red;
   }
 }
 
 // textbox: 限制文字最大行數
-.txt-l1{ @include textbox(1); }
-.txt-l2{ @include textbox(2); }
-.txt-l3{ @include textbox(3); }
+.txt-l1 {
+  @include textbox(1);
+}
+.txt-l2 {
+  @include textbox(2);
+}
+.txt-l3 {
+  @include textbox(3);
+}
 
 //  text color
-.text-main  { color: $main !important; }
-.text-grey  { color: $grey !important; }
-.text-light { color: $light !important; }
-.text-white { color: $white !important; }
-.text-black { color: $black !important; }
+.text-main {
+  color: $main !important;
+}
+.text-grey {
+  color: $grey !important;
+}
+.text-light {
+  color: $light !important;
+}
+.text-white {
+  color: $white !important;
+}
+.text-black {
+  color: $black !important;
+}
 
 // background color
-.bg-main  { background: $main !important; }
-.bg-grey  { background: $grey !important; }
-.bg-light { background: $light !important; }
-.bg-white { background: $white !important; }
-.bg-black { background: $black !important; }
+.bg-main {
+  background: $main !important;
+}
+.bg-grey {
+  background: $grey !important;
+}
+.bg-light {
+  background: $light !important;
+}
+.bg-white {
+  background: $white !important;
+}
+.bg-black {
+  background: $black !important;
+}
 
 // background - center & cover
-.bg-cover{
+.bg-cover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-
 /* button */
-.btn{
+.btn {
   text-align: center;
   font-size: 14px;
   padding: 0.5em 1em;
-  &:hover{
+  &:hover {
     box-shadow: $shadow-button;
   }
-  @include res(xlpad){
+  @include res(xlpad) {
     font-size: 16px;
     min-width: 120px;
     padding: 0.5em 2em;
@@ -111,89 +137,94 @@
 }
 
 /* 圓角按鈕 */
-.btn-pill { border-radius: 50px;}
+.btn-pill {
+  border-radius: 50px;
+}
 
-.btn-main{
+.btn-main {
   border: 1px solid $main;
   background: $main;
   box-shadow: $shadow-button;
   color: $white;
-  &:hover{
+  &:hover {
     background: $none;
     color: $main;
   }
 }
 
-.btn-white{
+.btn-white {
   background: $white;
   border-radius: 30px;
   color: $black;
-  &:hover{
+  &:hover {
     background: $second;
     color: #fff;
   }
 }
 
-.btn-line{
+.btn-line {
   color: $white;
   background: $brand-line;
-  &:hover{
-    background: rgba($brand-line,0.4);
+  &:hover {
+    background: rgba($brand-line, 0.4);
   }
 }
 
-.btn-facebook{
+.btn-facebook {
   color: $white;
   background: $brand-facebook;
-  &:hover{
-    background: rgba($brand-facebook,0.4);
+  &:hover {
+    background: rgba($brand-facebook, 0.4);
   }
 }
 
-.btn-google{
+.btn-google {
   color: $white;
   background: $brand-google;
-  &:hover{
-    background: rgba($brand-google,0.4); 
+  &:hover {
+    background: rgba($brand-google, 0.4);
   }
 }
 
-.tag{
+.tag {
   display: inline-block;
   border-radius: 4px;
   padding: 2px 8px;
   font-size: 14px;
   color: $white;
-  &.hot{
+  &.hot {
     background: $red;
   }
-  &.new{
+  &.new {
     background: $main;
   }
 }
 
 // list
-.list-inline-item{ vertical-align:middle; }
+.list-inline-item {
+  vertical-align: middle;
+}
 
 // 分頁按鈕 (Pagination)
-.list-page{
-  >li{
+.list-page {
+  > li {
     display: inline-block;
     margin-right: 5px;
-    @include res(pad){
+    @include res(pad) {
       margin-right: 10px;
     }
-    a{
+    a {
       display: block;
       @include square(30px);
       @include flexbox(center);
       border-radius: 50%;
       font-weight: bold;
       color: $main;
-      &:hover,:focus{
+      &:hover,
+      :focus {
         border: 1px solid $main;
       }
-      &.active{
+      &.active {
         box-shadow: $shadow-button;
         background: $main;
         color: $white;
@@ -202,13 +233,13 @@
   }
 }
 
-.list-angle{
-  li{
+.list-angle {
+  li {
     @include flexbox(y);
-    a{
-      &:before{
+    a {
+      &:before {
         @include fa;
-        content: '\f054';
+        content: "\f054";
         font-size: 0.75em;
         margin-right: 8px;
       }
@@ -216,56 +247,56 @@
   }
 }
 // box
-.board{
+.board {
   padding: 15px 10px;
   border: $border;
   border-radius: 15px;
-  @include res(nb){
-    padding: 25px 20px
+  @include res(nb) {
+    padding: 25px 20px;
   }
 }
 
-.oval{
-  @include oval(100px,$white);
+.oval {
+  @include oval(100px, $white);
   margin: auto;
-  img{
+  img {
     max-width: 65px;
     max-height: 65px;
   }
 }
 // Image 固定寬高比
-.box-img{
+.box-img {
   @include imgbox(100%);
-  &.r-4-3{
-    &:before{
+  &.r-4-3 {
+    &:before {
       padding-bottom: 75%;
     }
   }
-  &.r-16-9{
-    &:before{
+  &.r-16-9 {
+    &:before {
       padding-bottom: 56.25%;
     }
   }
-  &.img-fit-text{
-    &:before{
+  &.img-fit-text {
+    &:before {
       padding-bottom: 50%;
     }
   }
-  &.img-contain{
+  &.img-contain {
     background-size: contain;
   }
 }
 
 /* Iframe 影片樣式 */
-.box-iframe{
+.box-iframe {
   position: relative;
-  &:before{
-    content: '';
+  &:before {
+    content: "";
     width: 100%;
     display: block;
     padding-bottom: 56.25%;
   }
-  iframe{
+  iframe {
     position: absolute;
     left: 0;
     top: 0;
@@ -275,40 +306,40 @@
 }
 
 /* banner 大圖: 寬高比 (1920 * 600) */
-.banner{
+.banner {
   @include imgbox(31.25%, 200px); //1920 * 600px, min-height: 200px
-  .content{
+  .content {
     @include overlay($none);
     @include flexbox(center);
     text-align: center;
-    h2{
+    h2 {
       text-shadow: $shadow-text;
       letter-spacing: 0.01em;
       color: #fff;
       font-size: px2rem(36px);
       margin-bottom: 0.5em;
-      @include res(pad){
+      @include res(pad) {
         font-size: px2rem(48px);
       }
-      @include res(nb){
+      @include res(nb) {
         font-size: px2rem(62px);
       }
     }
   }
-  &.banner-page{
-    &:before{
+  &.banner-page {
+    &:before {
       padding-bottom: 20.83%; // 1920*400px
     }
   }
 }
 
-.box-qty{
-  input{
+.box-qty {
+  input {
     display: inline-block;
     max-width: 130px;
     vertical-align: middle;
   }
-  button{
+  button {
     border-radius: 3px;
     font-size: 18px;
     @include square(36px);
@@ -316,33 +347,33 @@
     display: inline-flex;
     vertical-align: middle;
     border: 1px solid #bab9b9;
-    &:first-of-type{
+    &:first-of-type {
       background: $grey;
       color: $white;
     }
-    &:nth-of-type(2){
+    &:nth-of-type(2) {
       background: $white;
       color: $grey;
     }
   }
 }
 
-.box-msg{
-  background: transparentize($main,0.92);
+.box-msg {
+  background: transparentize($main, 0.92);
   padding: 30px;
-  @include res(xlpad){
+  @include res(xlpad) {
     padding: 40px;
   }
 }
 
 /* 三欄式的輪播投影片 */
-.slider-col-3{
+.slider-col-3 {
   margin-left: -10px;
   margin-right: -10px;
-  .item{
+  .item {
     padding: 10px 10px 15px;
-    &:hover{
-      .card{
+    &:hover {
+      .card {
         box-shadow: $shadow-box;
       }
     }
@@ -350,89 +381,94 @@
 }
 
 // form
-select, input, textarea{
+select,
+input,
+textarea {
   padding: 5px 10px;
   border-radius: 5px;
   width: 100%;
   border: 1px solid $grey;
-  &[readonly], &:disabled{
+  &[readonly],
+  &:disabled {
     background: #e8e8e8;
   }
 }
 
-label.checkbox{
+label.checkbox {
   margin-bottom: 0;
   cursor: pointer;
-  input{
+  input {
     position: absolute;
     visibility: hidden;
     width: auto;
-    +span{
+    + span {
       position: relative;
       display: inline-block;
       padding-left: 32px;
       letter-spacing: 0;
       line-height: 1.5;
-      &:before, &:after{
-        content: ''; 
-        position:absolute;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
         left: 0;
         top: 0;
       }
-      &:before{
+      &:before {
         @include square(20px);
-        background:#e4e4e4;
+        background: #e4e4e4;
         border-radius: 6px;
       }
-      &:after{
+      &:after {
         border-bottom: 3px solid $main;
         border-right: 3px solid $main;
         width: 8px;
         height: 12px;
         transform: rotate(45deg);
         opacity: 0;
-        transition: .1s linear all;
+        transition: 0.1s linear all;
         left: 6px;
         top: 2px;
         border-radius: 2px;
       }
     }
-    &:checked{
-      +span:after{
-        opacity: 1!important;
+    &:checked {
+      + span:after {
+        opacity: 1 !important;
       }
     }
   }
 }
 
-label.radiowrap{
-  margin-right: .75em;
-  input{
+label.radiowrap {
+  margin-right: 0.75em;
+  input {
     position: absolute;
     visibility: hidden;
     width: auto;
-    +span{
+    + span {
       position: relative;
       display: inline-block;
       padding-left: 30px;
       letter-spacing: 0;
       line-height: 1.5;
 
-      &:before, &:after{
-        content: '';
-        position:absolute;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
         border-radius: 50%;
-        transition: .1s linear all;
+        transition: 0.1s linear all;
       }
 
-      &:before{
+      &:before {
         background: #eee;
         @include square(16px);
         left: 5px;
         top: calc((24px - 16px) / 2);
       }
 
-      &:after{
+      &:after {
         @include square(6px);
         left: calc(5px + 5px);
         top: calc((24px - 6px) / 2);
@@ -441,72 +477,41 @@ label.radiowrap{
       }
     }
 
-    &:checked{
-      +span:before{
+    &:checked {
+      + span:before {
         background: $main;
       }
-      +span:after{
-        opacity: 1!important;
+      + span:after {
+        opacity: 1 !important;
       }
     }
   }
 }
 
-
-// label.radiowrap {
-//   input ~ span { position: relative; }
-//   input~span:before {
-//     position: absolute;
-//     background: #e4e4e4;
-//     width: 1rem;
-//     height: 1rem;
-//     display: inline-block;
-//     border-radius: 50%;
-
-//     &:after {
-//       content: "";
-//       display: inline-block;
-//       position: absolute;
-//       top: calc((100% - 0.3rem) / 2);
-//       left: calc((100% - 0.3rem) / 2);
-//       width: 0.3rem;
-//       height: 0.3rem;
-//       background: transparent;
-//       border-radius: 50%;
-//       transition: all 0.5s ease;
-//     }
-//   }
-
-//   input:checked ~ span {
-//     background: $main;
-//     &:after { background: white; }
-//   }
-// }
-
-.form-item{
+.form-item {
   margin-bottom: 1em;
-  >label{
+  > label {
     display: block;
     margin-bottom: 0.25em;
   }
-  >.text-danger{
+  > .text-danger {
     font-size: 0.875em;
     margin-top: 0.25em;
     margin-bottom: 0;
   }
-  &.inline{
+  &.inline {
     display: flex;
     align-items: center;
-    flex-wrap:wrap;
-    >.text-danger{
+    flex-wrap: wrap;
+    > .text-danger {
       flex-basis: 100%;
     }
-    >label{
+    > label {
       display: inline-block;
       width: 80px;
       flex-shrink: 0;
       margin-bottom: 0;
-      + *{
+      + * {
         flex-grow: 1;
       }
     }
@@ -514,25 +519,24 @@ label.radiowrap{
 }
 
 // 表單驗證文字
-.text-danger{
+.text-danger {
   color: $red;
   font-size: 0.875em;
 }
 
-
 // for editor
 // 若串接後台編輯器 (例如: article.php)
-.edit-area{
-  ul{
+.edit-area {
+  ul {
     padding-left: 1.5em;
     list-style: disc;
   }
-  ol{
+  ol {
     padding-left: 1.5em;
     list-style: decimal;
   }
-  img{
-    height: auto!important;
+  img {
+    height: auto !important;
   }
 }
 
@@ -554,8 +558,9 @@ label.radiowrap{
     position: relative;
   }
 
-  .list-title, .list-content {
-    padding: .75rem 1rem;
+  .list-title,
+  .list-content {
+    padding: 0.75rem 1rem;
     border-left: 3px solid $main-dark;
     box-shadow: 1px 0 1px darken($white, 10%);
   }
@@ -567,16 +572,19 @@ label.radiowrap{
     background: $light;
     z-index: 1;
 
-    a.list-item, .list-item {
+    a.list-item,
+    .list-item {
       color: $black;
       width: 100%;
       padding: 0.5rem 0;
-      &:hover, &.active { color: $main; }
+      &:hover,
+      &.active {
+        color: $main;
+      }
     }
   }
 
-
-  .list-title.has-submenu{
+  .list-title.has-submenu {
     position: relative;
     // Caret
     &::after {
@@ -585,17 +593,21 @@ label.radiowrap{
       position: absolute;
       right: 0.5rem;
       top: 50%;
-      border-top: .3em solid;
-      border-right: .3em solid transparent;
+      border-top: 0.3em solid;
+      border-right: 0.3em solid transparent;
       border-bottom: 0;
-      border-left: .3em solid transparent;
+      border-left: 0.3em solid transparent;
       text-align: right;
       transform: translate(-100%, -50%);
       // transition: $transition;
     }
 
-    &.opened { color: $main; }
-    &.opened::after { transform: translate(-100%, -50%) rotate(180deg); }
+    &.opened {
+      color: $main;
+    }
+    &.opened::after {
+      transform: translate(-100%, -50%) rotate(180deg);
+    }
     // &:not(.opened) ~ .list-content { visibility: hidden; }
   }
 
@@ -609,4 +621,178 @@ label.radiowrap{
 
 .no-caret::after {
   content: none;
+}
+
+table.rwd-table {
+  td {
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .td-with-img {
+    img { max-width: 80px; }
+  }
+
+  tr.active,
+  td.active,
+  th.active {
+    &,
+    a {
+      background: $black;
+      color: $white;
+    }
+  }
+
+  .mobile-th {
+    display: none;
+  }
+
+  & > tfoot.tfoot-borderless > tr > td,
+  & > tfoot.tfoot-borderless > tr > th {
+    border: transparent;
+  }
+
+  @include res(pad, to-mb) {
+    & {
+      border: none;
+      font-size: 0.95rem;
+    }
+    thead {
+      display: none;
+    }
+    .mobile-th {
+      display: block;
+    }
+
+    tr.mobile-active,
+    td.mobile-active,
+    th.mobile-active {
+      &,
+      a {
+        background: $black;
+        color: $white;
+      }
+    }
+
+    thead tr,
+    tbody tr {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #cccccc;
+    }
+
+    tfoot tr {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    tbody tr {
+      margin-bottom: 1rem;
+    }
+
+    tbody td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 0;
+    }
+  }
+}
+
+.input-number {
+  width : 110px;
+  font-size : 0;
+  line-height : 30px;
+  border : 1px solid #CCCCCC;
+  vertical-align : top;
+  margin : 0 auto;
+
+  .minus, .plus, input {
+    display : inline-block;
+    margin : 0;
+    padding : 5px;
+    width : 30px;
+    height : 30px;
+    text-align : center;
+    border : none;
+    vertical-align : top;
+    height : 30px;
+  }
+
+  input {
+    width : 40px;
+    font-size : 1rem;
+  }
+
+  .minus {
+    border-right : 1px solid #CCCCCC;
+  }
+  .plus {
+    border-left : 1px solid #CCCCCC;
+  }
+  .minus, .plus {
+    width : 34px;
+    position : relative;
+    cursor: pointer;
+
+    &:before {
+      content : '';
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      width : 9px;
+      height : 1px;
+      pointer-events : none;
+      background-color : $black;
+      margin-left : -5px;
+    }
+
+    &:hover {
+      background-color : #CCCCCC;
+    }
+
+    &:hover:before {
+      background-color : #FFFFFF;
+    }
+  }
+
+  .plus:after {
+    content : '';
+    position : absolute;
+    pointer-events : none;
+    top : 50%;
+    left : 50%;
+    background-color : $black;
+    margin : -4px 0 0 -1px;
+    width : 1px;
+    height : 9px;
+  }
+  .plus:hover {
+    background-color : #CCCCCC;
+  }
+  .plus:hover:after {
+    background-color : #FFFFFF;
+  }
+}
+
+@include res (phone, to-mb) {
+  .input-number {
+    margin : 0;
+  }
+}
+
+
+.cart-num {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  background: $main;
+  color: $white;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
 }

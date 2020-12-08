@@ -19,7 +19,7 @@
                             <label>E-mail</label>
                             <input type="text"/>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">送出</button>
+                        <button type="submit" class="btn btn-main w-100">送出</button>
                     </form>
                 </div>
             </div>

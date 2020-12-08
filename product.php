@@ -71,7 +71,7 @@
 -->
                 </div>
                 <div class="mt-3">
-                    <p class="text-primary mb-1">促銷活動：</p>
+                    <p class="text-main mb-1">促銷活動：</p>
                     <a href="#" class="tag new">保養品全系列 9折</a>
                     <a href="#" class="tag new">保養品組合全系列 8折</a>
                 </div>

@@ -25,7 +25,7 @@
                     <div class="item"><a href="javascript:void(0);" title=""><img src="assets/img/product/pic-product-4.jpg" alt="" /> </a></div>
                 </div>
                 <div class="mt-3 promotiontags">
-                    <p class="text-primary mb-1">促銷活動：</p>
+                    <p class="text-main mb-1">促銷活動：</p>
                     <a href="#" class="promotiontag">保養品組合全系列  9折</a>
                     <a href="#" class="promotiontag">保養品組合全系列  9折</a>
                     <a href="#" class="promotiontag">保養品組合全系列  9折</a>

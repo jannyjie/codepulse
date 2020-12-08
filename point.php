@@ -16,7 +16,7 @@
                     <div class="pagetitle text-center"><h1>購物金記錄</h1></div>
                     <div class="row">
                         <div class="col-xl-5">
-                            <h6 class="text-primary">購物金介紹</h6>
+                            <h6 class="text-main">購物金介紹</h6>
                             <ul class="orderinfo">
                                 <li><b>取得方式：</b> <br>總訂單金額的 1% 將會回饋為購物金。</li>
                                 <li><b>折抵方式：</b> <br>總訂單金額的30%為最高折抵上限</li>
@@ -26,7 +26,7 @@
                         </div>
                         <div class="col-xl-7">
                             <hr class="d-xl-none mt-0">
-                            <h6 class="text-xl-right">累積購物金：<span class="text-primary">70</span></h6>
+                            <h6 class="text-xl-right">累積購物金：<span class="text-main">70</span></h6>
                             <table class="table">
                               <thead>
                                 <tr>

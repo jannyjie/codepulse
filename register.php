@@ -84,7 +84,7 @@
                         </div>
                         
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">註冊</button>
+                            <button type="submit" class="btn btn-main">註冊</button>
                         </div>
                     </form>
                 </div>

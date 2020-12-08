@@ -22,7 +22,7 @@
                             <label>確認新密碼</label>
                             <input type="confirm"/>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">送出</button>
+                        <button type="submit" class="btn btn-main w-100">送出</button>
                     </form>
                 </div>
             </div>

@@ -38,7 +38,7 @@
         <h5>button wave (淺色)</h5>
         <p> .waves-effect + .waves-light</p>
 
-        <div class="btn btn-primary waves-effect waves-light">Waves Light</div>
+        <div class="btn btn-main waves-effect waves-light">Waves Light</div>
         <div class="btn btn-light waves-effect waves-light">Waves Light</div>
       </div>
 
