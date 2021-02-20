@@ -267,6 +267,7 @@
 // Image 固定寬高比
 .box-img {
   @include imgbox(100%);
+  background-size: contain;
   &.r-4-3 {
     &:before {
       padding-bottom: 75%;
