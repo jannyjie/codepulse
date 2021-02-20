@@ -5,15 +5,18 @@
   margin:0 auto;
   padding: 0 10px;
   width: 100%;
+
   // row, col 的 gutters
-  >.row:not(.no-gutters){
+  .row:not(.no-gutters){
     margin-left: -10px;
     margin-right: -10px;
-    >div[class^='col-']{
-      padding-left: 10px;
-      padding-right: 10px;
-    }
   }
+
+  div[class^='col-']{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   @include res(pad){
     max-width: 700px;
   }
