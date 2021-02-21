@@ -1,46 +1,49 @@
-
 // 覆寫 bootstrap 格線系統
 // .container 寬度
-.container{
-  margin:0 auto;
-  padding: 0 10px;
+.container {
   width: 100%;
+  margin: 0 auto;
+  // padding: 0 10px;
 
   // row, col 的 gutters
-  .row:not(.no-gutters){
-    margin-left: -10px;
-    margin-right: -10px;
-  }
+  // .row:not(.no-gutters){
+  //   margin-left: -10px;
+  //   margin-right: -10px;
+  // }
+  // div[class^='col-']{
+  //   padding-left: 10px;
+  //   padding-right: 10px;
+  // }
 
-  div[class^='col-']{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  // padding: 0 25px; // 手機版增加左右的安全間距
+  // @include res(phone) {
+  //   padding: 0 15px; // 其他沿用 boootstrap 預設的安全間距
+  // }
 
-  @include res(pad){
+  @include res(pad) {
     max-width: 700px;
   }
-  @include res(xlpad){
+  @include res(xlpad) {
     max-width: 900px;
   }
-  @include res(nb){
-    max-width: 1100px;
+  @include res(nb) {
+    max-width: 1120px;
   }
-  @include res(pc){
-    max-width: 1200px;
+  @include res(pc) {
+    max-width: 1320px;
   }
-  @include res(xlpc){
-    max-width: 1400px;
+  @include res(xlpc) {
+    max-width: 1520px;
   }
 }
 
 //grids：自訂的格線系統
-.grids-2{
-  @include setgrids(1,10px,[['pad',2,20px]]);
+.grids-2 {
+  @include setgrids(1, 10px, [[ "pad", 2, 20px]]);
 }
-.grids-3{
-  @include setgrids(1,10px,[['pad',2,20px],['nb',3,30px]]);
+.grids-3 {
+  @include setgrids(1, 10px, [[ "pad", 2, 20px], [ "nb", 3, 30px]]);
 }
-.grids-6{
-  @include setgrids(2,6px,[['pad',3],['xlpad',4],['nb',6]]);
+.grids-6 {
+  @include setgrids(2, 6px, [[ "pad", 3], [ "xlpad", 4], [ "nb", 6]]);
 }
