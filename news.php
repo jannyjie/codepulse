@@ -133,17 +133,18 @@
           toggleOpen($(this))
         }
       });
+
+      function toggleOpen ($el) {
+        $el.addClass('opened');
+        $el.siblings('.list-content').slideDown(200);
+      }
+
+      function toggleClose ($el) {
+        $el.removeClass('opened');
+        $el.siblings('.list-content').slideUp(200);
+      }
     }
 
-    function toggleOpen ($el) {
-      $el.addClass('opened');
-      $el.siblings('.list-content').slideDown(200);
-    }
-
-    function toggleClose ($el) {
-      $el.removeClass('opened');
-      $el.siblings('.list-content').slideUp(200);
-    }
 
     setupCategoryMenu()
 
