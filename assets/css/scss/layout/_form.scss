@@ -1,0 +1,144 @@
+
+// form
+select,
+input,
+textarea {
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid $grey;
+  &[readonly],
+  &:disabled {
+    background: #e8e8e8;
+  }
+}
+
+label.checkbox {
+  margin-bottom: 0;
+  cursor: pointer;
+  input {
+    position: absolute;
+    visibility: hidden;
+    width: auto;
+    + span {
+      position: relative;
+      display: inline-block;
+      padding-left: 32px;
+      letter-spacing: 0;
+      line-height: 1.5;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      &:before {
+        @include square(20px);
+        background: #e4e4e4;
+        border-radius: 6px;
+      }
+      &:after {
+        border-bottom: 3px solid $main;
+        border-right: 3px solid $main;
+        width: 8px;
+        height: 12px;
+        transform: rotate(45deg);
+        opacity: 0;
+        transition: 0.1s linear all;
+        left: 6px;
+        top: 2px;
+        border-radius: 2px;
+      }
+    }
+    &:checked {
+      + span:after {
+        opacity: 1 !important;
+      }
+    }
+  }
+}
+
+label.radiowrap {
+  margin-right: 0.75em;
+  input {
+    position: absolute;
+    visibility: hidden;
+    width: auto;
+    + span {
+      position: relative;
+      display: inline-block;
+      padding-left: 30px;
+      letter-spacing: 0;
+      line-height: 1.5;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        transition: 0.1s linear all;
+      }
+
+      &:before {
+        background: #eee;
+        @include square(16px);
+        left: 5px;
+        top: calc((24px - 16px) / 2);
+      }
+
+      &:after {
+        @include square(6px);
+        left: calc(5px + 5px);
+        top: calc((24px - 6px) / 2);
+        background: $white;
+        opacity: 0;
+      }
+    }
+
+    &:checked {
+      + span:before {
+        background: $main;
+      }
+      + span:after {
+        opacity: 1 !important;
+      }
+    }
+  }
+}
+
+.form-item {
+  margin-bottom: 1em;
+  > label {
+    display: block;
+    margin-bottom: 0.25em;
+  }
+  > .text-danger {
+    font-size: 0.875em;
+    margin-top: 0.25em;
+    margin-bottom: 0;
+  }
+  &.inline {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    > .text-danger {
+      flex-basis: 100%;
+    }
+    > label {
+      display: inline-block;
+      width: 80px;
+      flex-shrink: 0;
+      margin-bottom: 0;
+      + * {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+// 表單驗證文字
+.text-danger {
+  color: $red;
+  font-size: 0.875em;
+}

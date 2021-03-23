@@ -37,6 +37,7 @@
     </div>
   <p class="copyright">Copyright © 2019 Codepulse ー All Rights Reserved.</p>
   </footer>        
+<a class="float-cart" href="#"><i class="fas fa-shopping-cart"></i> <span class="cart-num">0</span></a>
 <a class="scrollToTop" href="#"><i class="fas fa-chevron-up"></i></a>
         <script src="assets/js/jquery-3.4.1.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>

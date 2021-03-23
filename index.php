@@ -4,14 +4,21 @@
     <div class="mainslider">
       <? for($i=0;$i<3;$i++): ?>
       <div class="item">
-          <div class="banner" style="background-image:url('assets/img/pic-banner.png')">
-              <div class="content wow animated fadeIn">
-                  <div class="container">
-                      <h2>標題</h2>
-                      <a href="category.php" class="btn btn-white stretched-link">了解更多</a>
-                  </div>
+        <div class="banner" style="background-image:url('assets/img/pic-banner.png')">
+          <div class="content wow animated fadeIn">
+            <div class="container">
+              <h2 class="title-banner">標題</h2>
+
+              <div class="deco-line-wrap mb-4">
+                <div class="deco-line"></div>
+                <h3 class="subtitle-banner mb-0">副標題</h3>
+                <div class="deco-line"></div>
               </div>
+
+              <a href="category.php" class="btn btn-white stretched-link">了解更多</a>
+            </div>
           </div>
+        </div>
       </div>
       <? endfor; ?>
     </div>
@@ -51,9 +58,9 @@
         <div class="col-md-6 mb-3">
           <h2 class="title-sec">Title</h2>
           <div class="text">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt unde est ratione. Aliquam, doloribus expedita omnis sit voluptatem, vel adipisci, corporis nisi quam beatae doloremque perferendis! Soluta possimus atque sunt?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt unde est ratione. Aliquam, doloribus expedita omnis sit voluptatem, vel adipisci, corporis nisi quam beatae doloremque perferendis! Soluta possimus atque sunt?</p>
-          <a href="#" class="btn btn-main">Read More</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt unde est ratione. Aliquam, doloribus expedita omnis sit voluptatem, vel adipisci, corporis nisi quam beatae doloremque perferendis! Soluta possimus atque sunt?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt unde est ratione. Aliquam, doloribus expedita omnis sit voluptatem, vel adipisci, corporis nisi quam beatae doloremque perferendis! Soluta possimus atque sunt?</p>
+            <a href="#" class="btn btn-main">Read More</a>
           </div>
         </div>
       </div>
@@ -64,9 +71,9 @@
         <div class="col-md-6 mb-3">
           <h2 class="title-sec">Title</h2>
           <div class="text">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt unde est ratione. Aliquam, doloribus expedita omnis sit voluptatem, vel adipisci, corporis nisi quam beatae doloremque perferendis! Soluta possimus atque sunt?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt unde est ratione. Aliquam, doloribus expedita omnis sit voluptatem, vel adipisci, corporis nisi quam beatae doloremque perferendis! Soluta possimus atque sunt?</p>
-          <a href="#" class="btn btn-main">Read More</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt unde est ratione. Aliquam, doloribus expedita omnis sit voluptatem, vel adipisci, corporis nisi quam beatae doloremque perferendis! Soluta possimus atque sunt?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt unde est ratione. Aliquam, doloribus expedita omnis sit voluptatem, vel adipisci, corporis nisi quam beatae doloremque perferendis! Soluta possimus atque sunt?</p>
+            <a href="#" class="btn btn-main">Read More</a>
           </div>
         </div>
       </div>

@@ -59,6 +59,20 @@
   }
 }
 
+.float-cart {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  z-index: 999;
+  @include oval(40px,$second);
+  box-shadow: $shadow-box;
+  color: #fff;
+
+  &:hover{
+    background: $white;
+    color: $main;
+  }
+}
 .scrollToTop {
   position: fixed;
   right: 20px;
