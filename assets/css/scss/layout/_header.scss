@@ -1,27 +1,32 @@
 .headerwrap {
-  .navbar-toggler:not(.collapsed){
-    .fa-bars:before{
-      content: '\f00d';
+  // Toggler
+  .navbar-toggler:not(.collapsed) {
+    .fa-bars:before {
+      content: "\f00d";
     }
   }
   .navbar-toggler-icon {
     line-height: 1.5em;
   }
-  .navbar-brand{
+
+  // Nav Brand
+  .navbar-brand {
     margin-right: 0;
     max-width: calc(100% - 60px);
-    img{
+    img {
       max-height: 45px;
     }
-    @include res(xlpad){
+    @include res(xlpad) {
       padding: 1rem 0;
-      img{
+      img {
         max-height: 60px;
       }
     }
   }
-  &.fixed{
-    header{
+
+  // Fixed
+  &.fixed {
+    header {
       position: fixed;
       z-index: 5;
       left: 0;
@@ -29,42 +34,47 @@
       width: 100%;
       background: $white;
       box-shadow: $shadow-box;
-      .submenu{
+      .submenu {
         padding-top: 10px;
       }
     }
   }
 }
-.topbar{
+
+// Topbar
+.topbar {
   text-align: right;
   padding: 8px 0;
-  border-bottom: 1px solid #ededed;
-  a{
-    font-size:13px;
+  a {
+    font-size: 13px;
     color: $second;
-    &:hover{
+    &:hover {
       color: $main;
     }
   }
-  .submenu{
+  .submenu {
     padding-top: 8px;
     left: auto;
     right: 0;
   }
 }
 
+// Submenu
 .has_submenu {
   position: relative;
-  @include res(xlpad){
-    &:hover{
-      .submenu{
+}
+
+@include res(xlpad) {
+  .has_submenu {
+    &:hover {
+      .submenu {
         display: block;
       }
     }
   }
 }
 
-.submenu{
+.submenu {
   display: none;
   z-index: 2;
   min-width: 100%;
@@ -72,19 +82,19 @@
   position: absolute;
   left: 0;
   top: 100%;
-  ul{
+  ul {
     text-align: center;
     box-shadow: $shadow-box;
-    li{
+    li {
       white-space: nowrap;
       position: relative;
       background: #fff;
-      a{
-        display:block;
+      a {
+        display: block;
         background: #fff;
         font-size: 0.9em;
-        padding: 0.3rem 0.75rem!important;
-        &:hover{
+        padding: 0.3rem 0.75rem !important;
+        &:hover {
           background: $main;
           color: $white;
         }
@@ -93,38 +103,66 @@
   }
 }
 
-.navbar-nav{
-  >li{
-    >a{
-      font-size: 18px;
-      letter-spacing: 0.04em;
-      font-weight: 500;
-      @include res(nb){
-        padding-right:0!important;
-      }
+// NavBar Nav
+.navbar-nav {
+  > .nav-item {
+    transition: $transition;
+  }
+  > .nav-item > .nav-link {
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    color: $black;
+    transition: $transition;
+
+    &:hover {
+      color: $main;
+      text-shadow: 1px solid $main;
     }
-    &:not(:last-child){
-      @include res(xlpad){
-        margin-right: 1.5em;
-      }
-      @include res(nb){
-        margin-right: 3em;
-      }
+
+    @include res(nb) {
+      padding-right: 0 !important;
     }
   }
-  @include res(xlpad,to-mb){
+
+  @include res(xlpad, to-mb) {
     max-height: calc(100vh - 70px);
-    overflow-y: scroll;
-    .submenu{
+    overflow-y: auto;
+
+    .submenu {
       padding-top: 0;
       position: static;
     }
-    >li{
-      >a{
-        padding: 0.5em 1em;
-        border-bottom: $border;
-        width: 100%;
-      }
+    > .nav-item > .nav-link {
+      padding: 0.5em 1em;
+      border-bottom: $border;
+      width: 100%;
     }
+  }
+}
+
+
+
+@include res(xlpad) {
+  .navbar-nav > .nav-item {
+    border-bottom: 3px solid $none;
+  }
+
+  .navbar-nav > .nav-item:hover {
+    border-bottom: 3px solid $second;
+  }
+
+  .navbar-nav > .nav-item:not(:last-child) {
+    margin-right: 1.5em;
+  }
+}
+
+@include res(nb) {
+  .navbar-nav > .nav-item:not(:last-child) {
+    margin-right: 3em;
+  }
+
+  .navbar-nav > .nav-item > .nav-link {
+    padding-right: 0 !important;
   }
 }
