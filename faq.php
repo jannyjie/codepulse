@@ -17,7 +17,7 @@
           <ul class="list-faq">
             <? for($n=0;$n<10;$n++): ?>
             <li class="item">
-              <h5>網站架設完了之後，請問隱私權政策要寫什麼?</h5>
+              <h5 class="toggleopen">網站架設完了之後，請問隱私權政策要寫什麼?</h5>
               <div class="ans edit-area">
                 <p>請參考 <a href="info.php">隱私權政策</a> 頁面。</p>
               </div>
@@ -30,9 +30,3 @@
   </section>
 </div>
 <?php include('footer.php'); ?>
-<script>
-  $('.list-faq .item h5').on('click', function(e) {
-      $(this).toggleClass('opened');
-      $(this).siblings('.ans').slideToggle(200);
-  });
-</script>
