@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
 <div class="pagecont">
-  <section class="slidersec">
+  <section class="slidersec wow fadeIn">
     <div class="mainslider">
       <? for($i=0;$i<3;$i++): ?>
       <div class="item">
