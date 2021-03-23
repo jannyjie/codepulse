@@ -2,16 +2,16 @@
     <div class="container pt-3 pb-lg-3">
         <a href="index.php" class="logo mb-4"><img alt="" src="assets/img/logo.png"></a>
       <div class="row">
-        <div class="col-md-6 col-lg-2 mb-3">
+        <div class="col-md-6 col-lg-3 mb-3">
           <h5 class="footer-title"><span>關於我們</span></h5>
-            <ul class="list-angle">
+            <ul class="list-angle footer-ul-2-col">
                 <li><a href="about.php">關於我們</a></li>
                 <li><a href="news.php">最新消息</a></li>
                 <li><a href="location.php">經銷據點</a></li>
                 <li><a href="contact.php">聯絡我們</a></li>
             </ul>
         </div>
-          <div class="col-md-6 col-lg-4 mb-3">
+          <div class="col-md-6 col-lg-3 mb-3">
           <h5 class="footer-title"><span>聯絡我們</span></h5>
             <ul>
                 <li><a href="tel:0223650660">Tel: 02 23650660</a></li>
@@ -44,7 +44,7 @@
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/jquery.magnificpopup-1.1.0.min.js"></script>
         <script src="assets/js/waves-0.7.6.min.js"></script>
-        <script src="assets/js/common.js"></script>
+        <script src="assets/js/common.js?t=<?=time()?>"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   var lazyImages = [].slice.call(document.querySelectorAll(".lazy"));
