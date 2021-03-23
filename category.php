@@ -19,7 +19,9 @@
                 <div class="card">
                     <div class="box-img" style="background-image:url('<?=$p['image'];?>')"></div>
                     <div class="card-body">
-                        <a href="product.php" class="stretched-link"><h5 class="txt-l1"><?=$p['name'];?></h5></a>
+                        <h5>
+                            <a href="product.php" class="stretched-link txt-l1"><?=$p['name'];?></a>
+                        </h5>
                         <p class="mb-0 txt-l2"><?=$p['short_description'];?></p>
                     </div>
                 </div>
