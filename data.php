@@ -36,6 +36,21 @@
             'special' => 'NT$998',
             'discount' => '-20%',
             'short_description' => '產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述。',
+        ),array(
+            'image' => 'assets/img/demo-product.jpg',
+            'name' => '產品名稱',
+            'price' => 'NT$899',
+            'special' => 'NT$998',
+            'discount' => '-20%',
+            'short_description' => '產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述。',
+        ),
+        array(
+            'image' => 'assets/img/demo-product.jpg',
+            'name' => '產品名稱',
+            'price' => 'NT$899',
+            'special' => 'NT$998',
+            'discount' => '-20%',
+            'short_description' => '產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述，產品簡述。',
         ),
     );
     $children = array(

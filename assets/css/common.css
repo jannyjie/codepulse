@@ -1473,6 +1473,100 @@ label.radiowrap input:checked + span:after {
   font-size: 0.875em;
 }
 
+.hover-border-ani {
+  position: relative;
+  display: block;
+}
+
+.hover-border-ani:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  background: trasparent;
+  border: 2px solid black;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.hover-border-ani:hover:before {
+  animation: border-ani 0.5s ease-in-out forwards;
+}
+
+@keyframes border-ani {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: #28a7e1;
+    border-right-color: tranparent;
+    border-bottom-color: tranparent;
+    border-left-color: tranparent;
+  }
+  50% {
+    width: calc(100% + 2px * 2);
+    height: 0;
+    border-top-color: #28a7e1;
+    border-right-color: #28a7e1;
+    border-bottom-color: tranparent;
+    border-left-color: tranparent;
+  }
+  100% {
+    width: calc(100% + 2px * 2);
+    height: calc(100% + 2px * 2);
+    border-top-color: #28a7e1;
+    border-right-color: #28a7e1;
+    border-bottom-color: tranparent;
+    border-left-color: tranparent;
+  }
+}
+.hover-border-ani:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  background: trasparent;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.hover-border-ani:hover:after {
+  animation: border-ani2 0.5s ease-in-out forwards;
+}
+
+@keyframes border-ani2 {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: tranparent;
+    border-right-color: tranparent;
+    border-bottom-color: tranparent;
+    border-left-color: #2d83a7;
+  }
+  50% {
+    width: 0;
+    height: calc(100% + 2px * 2);
+    border-top-color: tranparent;
+    border-right-color: tranparent;
+    border-bottom-color: #2d83a7;
+    border-left-color: #2d83a7;
+  }
+  100% {
+    width: calc(100% + 2px * 2);
+    height: calc(100% + 2px * 2);
+    border-top-color: tranparent;
+    border-right-color: tranparent;
+    border-bottom-color: #2d83a7;
+    border-left-color: #2d83a7;
+  }
+}
 .slidersec {
   padding: 0;
   width: 100%;

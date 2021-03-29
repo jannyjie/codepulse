@@ -13,7 +13,7 @@
             <div class="col-lg-6 offset-lg-3">
                 <div class="box mt-lg-3 mt-0">
                     <h1 class="title-page">會員登入<span>Login</span></h1>
-                    <form action="_account.php">
+                    <form action="account.php">
                         <div class="form-item inline">
                             <label>帳號<br>(E-mail)</label>
                             <input type="text"/>
