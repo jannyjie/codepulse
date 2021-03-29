@@ -44,3 +44,23 @@
     .box-img { width: 16rem; }
   }
 }
+
+
+.box-article {
+  position: relative;
+  padding: 30px 28px 23px 23px;
+  background-color: $white;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(#3550A1, #528C97);
+    // background-image: linear-gradient( #e51468, orange 60%, #dfbc00);
+    border-radius: 0 5px 5px 0;
+}
+}

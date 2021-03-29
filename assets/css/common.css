@@ -401,11 +401,6 @@ input:focus, button:focus, textarea:focus, select:focus {
   color: #2d83a7;
   text-shadow: 1px solid #2d83a7;
 }
-@media all and (min-width: 1200px) {
-  .navbar-nav > .nav-item > .nav-link {
-    padding-right: 0 !important;
-  }
-}
 @media all and (max-width: 991px) {
   .navbar-nav {
     max-height: calc(100vh - 70px);
@@ -417,18 +412,32 @@ input:focus, button:focus, textarea:focus, select:focus {
   }
   .navbar-nav > .nav-item > .nav-link {
     padding: 0.5em 1em;
-    border-bottom: solid 1px #c5c5c5;
     width: 100%;
+  }
+  .navbar-nav > .nav-item:not(:last-child) > .nav-link {
+    border-bottom: solid 1px #c5c5c5;
   }
 }
 
 @media all and (min-width: 992px) {
   .navbar-nav > .nav-item {
-    border-bottom: 3px solid transparent;
+    position: relative;
+  }
+  .navbar-nav > .nav-item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #28a7e1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: all 0.5s ease;
   }
 
-  .navbar-nav > .nav-item:hover {
-    border-bottom: 3px solid #28a7e1;
+  .navbar-nav > .nav-item:hover:before {
+    transform: scaleX(1);
   }
 
   .navbar-nav > .nav-item:not(:last-child) {
@@ -439,11 +448,11 @@ input:focus, button:focus, textarea:focus, select:focus {
   .navbar-nav > .nav-item:not(:last-child) {
     margin-right: 3em;
   }
-
-  .navbar-nav > .nav-item > .nav-link {
-    padding-right: 0 !important;
-  }
 }
+.nav-link {
+  position: relative;
+}
+
 .footer {
   color: #777676;
   background: #f4f8fa;
@@ -846,6 +855,14 @@ input:focus, button:focus, textarea:focus, select:focus {
   height: 100%;
 }
 
+.hover-shadow-scale {
+  transition: all 0.5s ease;
+}
+.hover-shadow-scale:hover, .hover-shadow-scale:active {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0px 0.2rem 1rem 1px rgba(0, 15, 94, 0.16);
+}
+
 /* banner 大圖: 寬高比 (1920 * 600) */
 .banner {
   background-size: cover;
@@ -924,16 +941,58 @@ input:focus, button:focus, textarea:focus, select:focus {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.11);
 }
 
+.edit-area {
+  line-height: 1.75;
+  color: #656569;
+}
 .edit-area ul {
-  padding-left: 1.5em;
+  padding-left: 1em;
   list-style: disc;
 }
 .edit-area ol {
-  padding-left: 1.5em;
+  padding-left: 1em;
   list-style: decimal;
 }
 .edit-area img {
   height: auto !important;
+}
+.edit-area ul, .edit-area ol, .edit-area img, .edit-area h1, .edit-area h2, .edit-area h3, .edit-area h4, .edit-area h5, .edit-area h6 {
+  margin-bottom: 1rem;
+}
+.edit-area iframe {
+  max-width: 100%;
+}
+.edit-area a {
+  color: #2d83a7;
+}
+.edit-area blockquote {
+  background-color: #f5f6fa;
+  border-left: 4px solid #2d83a7;
+  padding: 20px 40px;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+.edit-area .post-details {
+  margin-bottom: 20px;
+  line-height: 1;
+  padding-left: 0;
+}
+.edit-area .post-details li {
+  display: inline-block;
+  padding-right: 20px;
+  margin-right: 20px;
+  border-right: 1px solid currentColor;
+}
+.edit-area .post-details li i {
+  margin-right: 5px;
+  color: #2d83a7;
+  position: relative;
+  top: 2px;
+}
+.edit-area .post-details li:last-child {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
 }
 
 .flex-between {
@@ -1814,6 +1873,23 @@ label.radiowrap input:checked + span:after {
   .card.card-news .box-img {
     width: 16rem;
   }
+}
+
+.box-article {
+  position: relative;
+  padding: 30px 28px 23px 23px;
+  background-color: #fff;
+}
+.box-article:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(#3550A1, #528C97);
+  border-radius: 0 5px 5px 0;
 }
 
 .list-contact-info li {

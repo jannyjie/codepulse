@@ -15,8 +15,8 @@
       </div>
         <div class="row">
             <?php foreach($products as $p): ?>
-            <div class="col-lg-3 col-sm-4 col-6">
-                <div class="card">
+            <div class="col-lg-3 col-sm-4 col-6 mb-4">
+                <div class="card hover-shadow-scale">
                     <div class="box-img" style="background-image:url('<?=$p['image'];?>')"></div>
                     <div class="card-body">
                         <h5>
@@ -28,7 +28,7 @@
             </div>
             <?php endforeach; ?>
         </div>
-        <div class="text-center">
+        <div class="text-center py-5">
             <ul class="list-page">
                 <li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
                 <li><a href="#"><i class="fas fa-angle-left"></i></a></li>

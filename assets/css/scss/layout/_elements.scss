@@ -258,6 +258,16 @@
   }
 }
 
+.hover-shadow-scale {
+  transition: $transition;
+
+  &:hover, &:active {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: $hover-shadow-card;
+
+  }
+}
+
 /* banner 大圖: 寬高比 (1920 * 600) */
 .banner {
   @include imgbox(31.25%, 200px); //1920 * 600px, min-height: 200px
@@ -323,17 +333,69 @@
 // for editor
 // 若串接後台編輯器 (例如: article.php)
 .edit-area {
+  line-height: 1.75;
+  color: #656569;
+
+  // h3 {
+  //   font-size: 30px;
+  // }
+
   ul {
-    padding-left: 1.5em;
+    padding-left: 1em;
     list-style: disc;
   }
   ol {
-    padding-left: 1.5em;
+    padding-left: 1em;
     list-style: decimal;
   }
+
   img {
     height: auto !important;
   }
+
+  ul, ol, img, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  a { color: $main; }
+
+  blockquote {
+    background-color: #f5f6fa;
+    border-left: 4px solid $main;
+    padding: 20px 40px;
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+
+  // 作者、發布日期等等
+  .post-details {
+    margin-bottom: 20px;
+    line-height: 1;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      padding-right: 20px;
+      margin-right: 20px;
+      border-right: 1px solid currentColor;
+      i {
+        margin-right: 5px;
+        color: $main;
+        position: relative;
+        top: 2px;
+      }
+      &:last-child {
+        border-right: none;
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
 }
 
 // flex-box 垂直置中, 水平為 space-between
