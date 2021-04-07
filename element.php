@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="between colors">
+          <div class="flex-between colors">
             <div class="main"></div>
             <div class="second"></div>
             <div class="light"></div>
@@ -47,14 +47,14 @@
       <h2>Buttons / Form</h2>
       <a href="#" class="btn">default</a>
       <a href="#" class="btn btn-main">main</a>
-      <a href="#" class="btn btn-main-2">second</a>
+      <a href="#" class="btn btn-second">second</a>
       <a href="#" class="btn btn-white">white</a>
       <a href="#" class="btn btn-more">More</a>
       <a href="#" class="btn btn-banner">Banner</a>
       <span class="tag hot">tag-hot</span>
       <span class="tag new">tag-new</span>
       
-      <a href="#" class="btn-dark btn">arrow icon<span class="i_arrow"></span></a>
+      <a href="#" class="btn-dark btn">arrow icon<span class="i-arrow-r"></span></a>
       <a href="#" class="btn-sec">section</a>
       <h6 class="sub">數量</h6>
       <div class="box-qty">
