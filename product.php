@@ -87,14 +87,14 @@
                 <hr>
                 <div class="options">
                     <span>選項</span>
-                    <select>
+                    <select class="form-control">
                         <option>一件</option>
                         <option>全套組</option>
                     </select>
                 </div>
                 <div class="options">
                     <span>數量</span>
-                    <input type="text" value="1">
+                    <input class="form-control" type="text" value="1">
                 </div>
                 <hr>
                 <p class="price">
@@ -103,7 +103,7 @@
                 </p>
                 <div class="btns">
                     <button type="button" class="btn btn-main">加入購物車</button>
-                    <button type="button" class="btn btn-main-2">立即購買</button>
+                    <button type="button" class="btn btn-outline-main">立即購買</button>
                     <button type="button" class="btn btn-more"><span class="d-none d-lg-inline">加入收藏</span> <i class="far fa-heart"></i></button>
                 </div>
                 <div class="btns">分享：

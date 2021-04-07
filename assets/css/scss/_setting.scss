@@ -271,17 +271,32 @@ $device: (
     background: $bg;
 }
 
-@mixin absolute($perc){
-  top: $perc;
-  left: $perc;
-  right: $perc;
-  bottom: $perc;
+@mixin absolute($top, $right, $bottom, $left){
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
 }
+
 // 設定 瀏覽器捲軸 的樣式
-@mixin scrollbar($width,$bg,$color,$hover){
+@mixin scrollbar($width, $bg, $color, $hover){
   $scrollbar: -webkit-scrollbar;
   ::#{$scrollbar} {width: $wid;height: $width}
   ::#{$scrollbar}-track {background: $bg; }
   ::#{$scrollbar}-thumb {background: $color; }
   ::#{$scrollbar}-thumb:hover {background: $hover; }
+}
+
+// 淡入
+
+@keyframes cp-fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }

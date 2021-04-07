@@ -36,6 +36,9 @@
 .text-main {
   color: $main !important;
 }
+.text-second {
+  color: $second !important;
+}
 .text-grey {
   color: $grey !important;
 }
@@ -51,19 +54,22 @@
 
 // background color
 .bg-main {
-  background: $main !important;
+  background-color: $main !important;
+}
+.bg-second {
+  background-color: $second !important;
 }
 .bg-grey {
-  background: $grey !important;
+  background-color: $grey !important;
 }
 .bg-light {
-  background: $light !important;
+  background-color: $light !important;
 }
 .bg-white {
-  background: $white !important;
+  background-color: $white !important;
 }
 .bg-black {
-  background: $black !important;
+  background-color: $black !important;
 }
 
 // background - center & cover
@@ -104,6 +110,17 @@
   }
 }
 
+.btn-second {
+  border: 1px solid $second;
+  background: $second;
+  box-shadow: $shadow-button;
+  color: $white;
+  &:hover {
+    background: $none;
+    color: $second;
+  }
+}
+
 .btn-white {
   background: $white;
   border-radius: 30px;
@@ -111,6 +128,17 @@
   &:hover {
     background: $second;
     color: #fff;
+  }
+}
+
+.btn-outline-main  {
+  color: $main;
+  border-color: $main;
+
+  &:hover {
+    color: $white;
+    background-color: $main;
+    border-color: $main;
   }
 }
 
@@ -405,6 +433,7 @@
   flex-wrap: wrap;
 }
 
+// flex-box 垂直/水平置中
 .flex-center {
   @include flexbox(center);
   flex-wrap: wrap;

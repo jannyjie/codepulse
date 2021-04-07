@@ -13,6 +13,15 @@ textarea {
   }
 }
 
+// Select 客製化樣式
+select.form-control {
+  appearance: none;
+  -webkit-appearance: none; // 移除 Safari 預設樣式
+  background: center right 14px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23505050' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-size: 12px;
+}
+
+// Checkbox 客製化樣式
 label.checkbox {
   margin-bottom: 0;
   cursor: pointer;
@@ -59,6 +68,7 @@ label.checkbox {
   }
 }
 
+// Radio 客製化樣式
 label.radiowrap {
   margin-right: 0.75em;
   input {
@@ -71,6 +81,7 @@ label.radiowrap {
       padding-left: 30px;
       letter-spacing: 0;
       line-height: 1.5;
+      cursor: pointer;
 
       &:before,
       &:after {

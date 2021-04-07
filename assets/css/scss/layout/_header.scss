@@ -35,7 +35,7 @@
       background: $white;
       box-shadow: $shadow-box;
       .submenu {
-        padding-top: 10px;
+        // padding-top: 10px;
       }
     }
   }
@@ -69,6 +69,7 @@
     &:hover {
       .submenu {
         display: block;
+        animation: cp-fadeInDown 0.5s;
       }
     }
   }
@@ -78,7 +79,7 @@
   display: none;
   z-index: 2;
   min-width: 100%;
-  padding-top: 12px;
+  // padding-top: 12px;
   position: absolute;
   left: 0;
   top: 100%;
@@ -147,15 +148,9 @@
 
 
 @include res(xlpad) {
-  // .navbar-nav > .nav-item {
-  //   border-bottom: 3px solid $none;
-  // }
-
-
   .navbar-nav > .nav-item {
-    // border-bottom: 3px solid $none;
-
     position: relative;
+
     &:before {
       content: "";
       position: absolute;
@@ -170,20 +165,16 @@
     }
   }
 
-  .navbar-nav > .nav-item:hover {
-    // border-bottom: 3px solid $second;
-
-    &:before {
-      transform: scaleX(1);
-    }
+  .navbar-nav > .nav-item:hover:before {
+    transform: scaleX(1);
   }
-
-  // .navbar-nav > .nav-item:hover {
-  //   border-bottom: 3px solid $second;
-  // }
 
   .navbar-nav > .nav-item:not(:last-child) {
     margin-right: 1.5em;
+  }
+
+  .navbar-nav > .nav-item > .nav-link {
+    padding: 1rem 0.5rem;
   }
 }
 
@@ -191,31 +182,4 @@
   .navbar-nav > .nav-item:not(:last-child) {
     margin-right: 3em;
   }
-
-  .navbar-nav > .nav-item > .nav-link {
-    // padding-right: 0 !important;
-  }
 }
-.nav-link {
-  position: relative;
-}
-
-// .nav-link::after {
-//   content: "";
-//   display: block;
-//   height: 2px;
-//   width: 100%;
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   transform-origin: left;
-//   transform: scaleX(0);
-//   background-color: $main;
-//   opacity: 0;
-//   transition: 0.5s all ease-in-out;
-// }
-
-// .nav-link:hover::after {
-//   opacity: 1;
-//   transform: scaleX(1);
-// }
