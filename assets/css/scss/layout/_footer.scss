@@ -81,6 +81,7 @@
   @include oval(40px,$second);
   box-shadow: $shadow-box;
   color: #fff;
+  transition: none;
   &:hover{
     background: $white;
     color: $main;
