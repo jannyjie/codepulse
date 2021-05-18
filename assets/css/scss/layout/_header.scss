@@ -34,9 +34,6 @@
       width: 100%;
       background: $white;
       box-shadow: $shadow-box;
-      .submenu {
-        // padding-top: 10px;
-      }
     }
   }
 }
@@ -52,6 +49,10 @@
       color: $main;
     }
   }
+
+  .has_submenu > a:after {
+    content: none;
+  }
   .submenu {
     padding-top: 8px;
     left: auto;
@@ -64,14 +65,20 @@
   position: relative;
 }
 
+
 @include res(xlpad) {
-  .has_submenu {
-    &:hover {
-      .submenu {
-        display: block;
-        animation: cp-fadeInDown 0.5s;
-      }
-    }
+  .has_submenu > a:after {
+    @include fa;
+    content: "\f078";
+    margin-left: .255em;
+    vertical-align: middle;
+    font-size: 0.8em;
+  }
+
+  .has_submenu:hover .submenu {
+    display: block;
+    animation: cp-fadeInDown 0.5s;
+    box-shadow: $shadow-box;
   }
 }
 
@@ -84,8 +91,6 @@
   left: 0;
   top: 100%;
   ul {
-    text-align: center;
-    box-shadow: $shadow-box;
     li {
       white-space: nowrap;
       position: relative;
@@ -104,8 +109,36 @@
   }
 }
 
+// 第二層子選單
+.submenu .has_submenu {
+  position: relative;
+}
+
+.submenu .has_submenu .submenu {
+  display: none;
+}
+
+@include res(xlpad) {
+  .submenu .has_submenu > a:after{
+    @include fa;
+    content: "\f054";
+    position: absolute;
+    right: 1em;
+    font-size: 1em;
+  }
+
+  .submenu .has_submenu:hover .submenu {
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: 100%;
+    border-top: 3px solid $second;
+  }
+}
 // NavBar Nav
 .navbar-nav {
+  text-align: center;
+
   > .nav-item {
     transition: $transition;
   }
@@ -120,20 +153,18 @@
       color: $main;
       text-shadow: 1px solid $main;
     }
-
-    @include res(nb) {
-      // padding-right: 0 !important;
-    }
   }
 
   @include res(xlpad, to-mb) {
     max-height: calc(100vh - 70px);
     overflow-y: auto;
 
-    .submenu {
+    .submenu,
+    .submenu .submenu {
       padding-top: 0;
       position: static;
     }
+
     > .nav-item > .nav-link {
       padding: 0.5em 1em;
       width: 100%;
@@ -144,8 +175,6 @@
     }
   }
 }
-
-
 
 @include res(xlpad) {
   .navbar-nav > .nav-item {

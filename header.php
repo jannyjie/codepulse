@@ -72,19 +72,30 @@
 
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="navbar-nav mr-0 ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="sitemap.php">Sitemap</a>
-                            </li>
                             <li class="nav-item has_submenu">
-                                <a class="nav-link dropdown-toggle" href="category.php">
+                                <a href="#" class="nav-link">
                                     dropdown sample
                                 </a>
                                 <div class="submenu">
                                     <ul>
                                         <li><a class="dropdown-item" href="category.php">Link 1</a></li>
-                                        <li><a class="dropdown-item" href="category.php">Link 2</a></li>
+                                        <li class="has_submenu">
+                                            <a href="#" class="dropdown-item">Link 2</a>
+                                            <div class="submenu">
+                                                <ul>
+                                                    <li>
+                                                        <a class="dropdown-item" href="category.php">SubLink 1</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="category.php">SubLink 2</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a class="dropdown-item" href="category.php">Link 3</a></li>
                                     </ul>
                                 </div>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="sitemap.php">Sitemap</a>
                             </li>
                         </ul>
                     </div>
