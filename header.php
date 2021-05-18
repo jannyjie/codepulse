@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <title>Codepulse Demo</title>
     <meta charset="UTF-8">
@@ -15,10 +16,10 @@
     <meta http-equiv="cache-control" content="no-cache">
 
     <link href="assets/img/fav.png" rel="shortcut icon" type="image/png">
-  
+
     <!--  Font family -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,600,700,900|Oswald:400,500,700,900&display=swap" rel="stylesheet" type="text/css">
-  
+
     <!--  Plugins -->
     <link href="assets/css/animate.css" rel="stylesheet" type="text/css">
     <link href="assets/css/magnific-popup.css" rel="stylesheet" type="text/css">
@@ -26,19 +27,19 @@
     <link href="assets/css/fontawesome.all.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/slick.css" rel="stylesheet" type="text/css">
     <!-- Plugins for vendors.php -->
-    <link href="assets/css/waves-0.7.6.min.css"  rel="stylesheet" type="text/css"/>
+    <link href="assets/css/waves-0.7.6.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
 
     <!--  Customized -->
     <link href="assets/css/common.css?t=<?=time()?>" rel="stylesheet" type="text/css">
 </head>
-    
+
 <?php include('data.php'); /*Demo用*/ ?>
-    
+
 <body>
     <div class="headerwrap">
         <div class="topbar">
-			<div class="container">
+            <div class="container">
                 <div class="flex-between">
                     <a href="article.php">全館優惠</a>
                     <ul>
@@ -57,37 +58,37 @@
                         </li>
                     </ul>
                 </div>
-			</div>
-		</div>
+            </div>
+        </div>
         <header>
             <div class="container">
-            <nav class="navbar navbar-expand-lg p-0">
-                <a class="navbar-brand" href="index.php">
-                  <img src="assets/img/logo.png">
-                </a>
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                </button>
+                <nav class="navbar navbar-expand-lg p-0">
+                    <a class="navbar-brand" href="index.php">
+                        <img src="assets/img/logo.png">
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+                        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav mr-0 ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="sitemap.php">Sitemap</a>
-                        </li>
-                        <li class="nav-item has_submenu">
-                            <a class="nav-link dropdown-toggle" href="category.php">
-                                dropdown sample
-                            </a>
-                            <div class="submenu">
-                              <ul>
-                                  <li><a class="dropdown-item" href="category.php">Link 1</a></li>
-                                  <li><a class="dropdown-item" href="category.php">Link 2</a></li>
-                              </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-           </div>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="navbar-nav mr-0 ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="sitemap.php">Sitemap</a>
+                            </li>
+                            <li class="nav-item has_submenu">
+                                <a class="nav-link dropdown-toggle" href="category.php">
+                                    dropdown sample
+                                </a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="category.php">Link 1</a></li>
+                                        <li><a class="dropdown-item" href="category.php">Link 2</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </header>
     </div>

@@ -5,70 +5,35 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
                 <li class="breadcrumb-item active"><a href="#">分類名稱</a></li>
-              </ol>
+            </ol>
         </div>
     </nav>
     <div class="container">
         <div class="row mb-4">
             <div class="col-xl-5 col-md-6">
                 <div class="gallery">
-                    <div class="item"> 
-                      <a href="assets/img/demo-product.jpg" class="popup w-100">
-                        <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
-                      </a> 
+                    <div class="item">
+                        <a href="assets/img/demo-product.jpg" class="popup w-100">
+                            <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
+                        </a>
                     </div>
-                    <div class="item"> 
-                      <a href="assets/img/demo-product.jpg" class="popup w-100">
-                        <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
-                      </a> 
+                    <div class="item">
+                        <a href="assets/img/demo-product.jpg" class="popup w-100">
+                            <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
+                        </a>
                     </div>
-<!--
-                    <div class="item"> 
-                      <a href="assets/img/demo-product.jpg" class="popup w-100">
-                        <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
-                      </a> 
-                    </div>
-                    <div class="item"> 
-                      <a href="assets/img/demo-product.jpg" class="popup w-100">
-                        <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
-                      </a> 
-                    </div>
-                    <div class="item"> 
-                      <a href="assets/img/demo-product.jpg" class="popup w-100">
-                        <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
-                      </a> 
-                    </div>
--->
-
                 </div>
                 <div class="thumbs">
                     <div class="item">
-                      <a href="javascript:void(0);" title="" class="w-100">
-                      <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
-                      </a>
+                        <a href="javascript:void(0);" title="" class="w-100">
+                            <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
+                        </a>
                     </div>
                     <div class="item">
-                      <a href="javascript:void(0);" title="" class="w-100">
-                      <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
-                      </a>
+                        <a href="javascript:void(0);" title="" class="w-100">
+                            <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
+                        </a>
                     </div>
-<!--
-                    <div class="item">
-                      <a href="javascript:void(0);" title="" class="w-100">
-                      <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="javascript:void(0);" title="" class="w-100">
-                      <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
-                      </a>
-                    </div>
-                    <div class="item">
-                      <a href="javascript:void(0);" title="" class="w-100">
-                      <div class="box-img" style="background-image:url('assets/img/demo-product.jpg')"></div>
-                      </a>
-                    </div>
--->
                 </div>
                 <div class="mt-3">
                     <p class="text-main mb-1">促銷活動：</p>
@@ -115,8 +80,8 @@
         <h2 class="title-sec">商品詳情</h2>
         <div class="desc">
             <p>【專業進階級防曬】臨界波長381.8nm 有效抵抗紫外線長波UVA，Boots Star ★★★★ 全寬頻防護，有效預防曬紅、曬黑、曬傷、光老化。 <br><br>
-                    【輕盈水感】水為基底搭配無油配方、三效獨特霧光Dry Touch成分，提供給肌膚絲絨般霧面觸感，使肌膚清爽無負擔。 <br><br>
-                    【專業成分Cellular Bioprotection™】有效保護肌膚，提升肌膚防禦力。</p>
+                【輕盈水感】水為基底搭配無油配方、三效獨特霧光Dry Touch成分，提供給肌膚絲絨般霧面觸感，使肌膚清爽無負擔。 <br><br>
+                【專業成分Cellular Bioprotection™】有效保護肌膚，提升肌膚防禦力。</p>
         </div>
         <h2 class="title-sec mt-5">相關商品</h2>
         <div class="row no-gutters">
@@ -125,7 +90,9 @@
                 <div class="card">
                     <div class="box-img" style="background-image:url('<?=$p['image'];?>')"></div>
                     <div class="card-body">
-                        <a href="product.php" class="stretched-link"><h5 class="txt-l1"><?=$p['name'];?></h5></a>
+                        <a href="product.php" class="stretched-link">
+                            <h5 class="txt-l1"><?=$p['name'];?></h5>
+                        </a>
                         <p class="mb-0 txt-l2"><?=$p['short_description'];?></p>
                     </div>
                 </div>

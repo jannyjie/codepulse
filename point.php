@@ -6,14 +6,16 @@
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
                 <li class="breadcrumb-item"><a href="#">會員中心</a></li>
                 <li class="breadcrumb-item active"><a href="#">購物金記錄</a></li>
-              </ol>
+            </ol>
         </div>
     </nav>
     <div class="container pb-lg-5 pb-4">
         <div class="row">
             <div class="col-12">
                 <div class="box mt-lg-3 mt-0">
-                    <div class="pagetitle text-center"><h1>購物金記錄</h1></div>
+                    <div class="pagetitle text-center">
+                        <h1>購物金記錄</h1>
+                    </div>
                     <div class="row">
                         <div class="col-xl-5">
                             <h6 class="text-main">購物金介紹</h6>
@@ -28,35 +30,35 @@
                             <hr class="d-xl-none mt-0">
                             <h6 class="text-xl-right">累積購物金：<span class="text-main">70</span></h6>
                             <table class="table">
-                              <thead>
-                                <tr>
-                                  <td>日期</td>
-                                  <td>說明</td>
-                                  <td>點數</td>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                  <tr>
-                                      <td>2018-09-02</td>
-                                      <td>使用購物金折抵消費</td>
-                                      <td>-80</td>
+                                <thead>
+                                    <tr>
+                                        <td>日期</td>
+                                        <td>說明</td>
+                                        <td>點數</td>
                                     </tr>
-                                  <tr>
-                                      <td>2018-07-09</td>
-                                      <td>消費回饋</td>
-                                      <td>55</td>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2018-09-02</td>
+                                        <td>使用購物金折抵消費</td>
+                                        <td>-80</td>
                                     </tr>
-                                  <tr>
-                                      <td>2018-07-02</td>
-                                      <td>消費回饋</td>
-                                      <td>25</td>
+                                    <tr>
+                                        <td>2018-07-09</td>
+                                        <td>消費回饋</td>
+                                        <td>55</td>
                                     </tr>
-                                  <tr>
-                                      <td>2018-06-02</td>
-                                      <td>消費回饋</td>
-                                      <td>70</td>
+                                    <tr>
+                                        <td>2018-07-02</td>
+                                        <td>消費回饋</td>
+                                        <td>25</td>
                                     </tr>
-                              </tbody>
+                                    <tr>
+                                        <td>2018-06-02</td>
+                                        <td>消費回饋</td>
+                                        <td>70</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>

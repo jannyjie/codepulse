@@ -6,14 +6,16 @@
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
                 <li class="breadcrumb-item"><a href="#">會員中心</a></li>
                 <li class="breadcrumb-item active"><a href="#">會員資料</a></li>
-              </ol>
+            </ol>
         </div>
     </nav>
     <div class="container pb-lg-5 pb-4">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="form-box mt-lg-3 mt-0">
-                    <div class="pagetitle text-center"><h1>會員資料</h1></div>
+                    <div class="pagetitle text-center">
+                        <h1>會員資料</h1>
+                    </div>
                     <form action="account.php">
                         <div class="item">
                             <label>帳號(E-mail)</label>
@@ -23,13 +25,13 @@
                             <div class="col-sm-6">
                                 <div class="item">
                                     <label>姓氏</label>
-                                    <input type="text"/>
+                                    <input type="text" />
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="item">
                                     <label>名字</label>
-                                    <input type="text"/>
+                                    <input type="text" />
                                 </div>
                             </div>
                         </div>
@@ -37,13 +39,13 @@
                             <div class="col-sm-6">
                                 <div class="item">
                                     <label>聯絡電話</label>
-                                    <input type="text"/>
+                                    <input type="text" />
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="item">
                                     <label>生日</label>
-                                    <input type="date"/>
+                                    <input type="date" />
                                 </div>
                             </div>
                         </div>

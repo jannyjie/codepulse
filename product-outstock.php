@@ -5,7 +5,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
                 <li class="breadcrumb-item active"><a href="#">分類名稱</a></li>
-              </ol>
+            </ol>
         </div>
     </nav>
     <div class="container">
@@ -26,9 +26,9 @@
                 </div>
                 <div class="mt-3 promotiontags">
                     <p class="text-main mb-1">促銷活動：</p>
-                    <a href="#" class="promotiontag">保養品組合全系列  9折</a>
-                    <a href="#" class="promotiontag">保養品組合全系列  9折</a>
-                    <a href="#" class="promotiontag">保養品組合全系列  9折</a>
+                    <a href="#" class="promotiontag">保養品組合全系列 9折</a>
+                    <a href="#" class="promotiontag">保養品組合全系列 9折</a>
+                    <a href="#" class="promotiontag">保養品組合全系列 9折</a>
                 </div>
             </div>
             <div class="col-xl-7 col-md-6 mt-4 mt-md-0">
@@ -61,8 +61,8 @@
         </div>
         <div class="desc">
             <p>【專業進階級防曬】臨界波長381.8nm 有效抵抗紫外線長波UVA，Boots Star ★★★★ 全寬頻防護，有效預防曬紅、曬黑、曬傷、光老化。 <br><br>
-                    【輕盈水感】水為基底搭配無油配方、三效獨特霧光Dry Touch成分，提供給肌膚絲絨般霧面觸感，使肌膚清爽無負擔。 <br><br>
-                    【專業成分Cellular Bioprotection™】有效保護肌膚，提升肌膚防禦力。</p>
+                【輕盈水感】水為基底搭配無油配方、三效獨特霧光Dry Touch成分，提供給肌膚絲絨般霧面觸感，使肌膚清爽無負擔。 <br><br>
+                【專業成分Cellular Bioprotection™】有效保護肌膚，提升肌膚防禦力。</p>
         </div>
         <div class="sectitle mt-5">
             <h2>相關商品</h2>

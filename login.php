@@ -5,7 +5,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.php">首頁</a></li>
                 <li class="breadcrumb-item active"><a href="_login.php">會員登入</a></li>
-              </ol>
+            </ol>
         </div>
     </nav>
     <div class="container pb-lg-5 pb-4">
@@ -16,11 +16,11 @@
                     <form action="account.php">
                         <div class="form-item inline">
                             <label>帳號<br>(E-mail)</label>
-                            <input type="text"/>
+                            <input type="text" />
                         </div>
                         <div class="form-item inline">
                             <label>密碼</label>
-                            <input type="password"/>
+                            <input type="password" />
                         </div>
                         <div class="row mb-3">
                             <div class="col-6">

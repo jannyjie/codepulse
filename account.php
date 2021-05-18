@@ -5,7 +5,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.php">首頁</a></li>
                 <li class="breadcrumb-item active"><a href="_account.php">會員中心</a></li>
-              </ol>
+            </ol>
         </div>
     </nav>
     <div class="container pb-lg-5 pb-4">
@@ -14,7 +14,7 @@
                 <div class="mt-lg-3 mt-0">
                     <div class="title-page">
                         <h1>會員中心
-                        <span>Member</span>
+                            <span>Member</span>
                         </h1>
                     </div>
                     <div class="row no-gutters member-func">
