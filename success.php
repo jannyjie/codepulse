@@ -10,11 +10,11 @@
         </div>
     </nav>
     <div class="container pb-5">
-        <div class="pagetitle"><h1>最新消息</h1></div>
+    <div class="pagetitle text-center"><h1>最新消息</h1></div>
         <div class="row">
-            <div class="col-12">
-                <p>您的訊息已成功送出，客服人員將盡快與您聯繫！</p>
-                <a href="index.php" class="mainbtn mt-3">回首頁</a>
+            <div class="col-12 text-center mt-5 mb-5">
+                <p class="pb-4">您的訊息已成功送出，客服人員將盡快與您聯繫！</p>
+                <a href="index.php" class="btn btn-main mt-3">回首頁</a>
             </div>
         </div>
     </div>
