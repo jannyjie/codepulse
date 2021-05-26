@@ -22,10 +22,9 @@ $brand-google: #ea4335;
 $black-op: rgba(0, 0, 0, 0.69);
 $black-gradient: linear-gradient(to left, $none, rgba(0, 0, 0, 0.68), $none);
 
-
 // fonts
-$font-default: 'Arial', 'Noto Sans TC', sans-serif;
-$font-en: 'Oswald','Noto Sans TC', sans-serif;
+$font-default: "Arial", "Noto Sans TC", sans-serif;
+$font-en: "Oswald", "Noto Sans TC", sans-serif;
 
 // shadows
 $shadow-button: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
@@ -35,7 +34,7 @@ $shadow-card: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
 
 $hover-shadow-card: 0px 0.2rem 1rem 1px rgba(0, 15, 94, 0.16);
 // borders
-$border:solid 1px #c5c5c5;
+$border: solid 1px #c5c5c5;
 
 // transition
 $transition: all 0.5s ease;
@@ -51,21 +50,21 @@ $transition: all 0.5s ease;
 }
 
 // 無條件捨去到小數點第 $n 位
-@function floorD($number, $n:0){
-  $p:pow(10, $n);
+@function floorD($number, $n: 0) {
+  $p: pow(10, $n);
   @return floor($number * $p) / $p;
 }
 
 @function px2rem($px) {
-  @return floorD($px/16px,2)*1rem;
+  @return floorD($px/16px, 2) * 1rem;
 }
 
 // 製作 margin & padding
 @mixin m($direction, $size) {
-  margin-#{$direction}: $size!important;
+  margin-#{$direction}: $size !important;
 }
 @mixin p($direction, $size) {
-  padding-#{$direction}: $size!important;
+  padding-#{$direction}: $size !important;
 }
 
 // 自訂 Breakpoint
@@ -73,12 +72,12 @@ $transition: all 0.5s ease;
 // 擴充：1400, 1600
 
 $device: (
-  xlpc:  1600px,
-  pc:    1400px,
-  nb:    1200px,
+  xlpc: 1600px,
+  pc: 1400px,
+  nb: 1200px,
   xlpad: 992px,
-  pad:   768px,
-  phone: 576px
+  pad: 768px,
+  phone: 576px,
 );
 
 // 取得自訂斷點
@@ -103,12 +102,12 @@ $device: (
   @media all and (max-width: 767px) {...}
 */
 @mixin res($selected, $mode: to-pc) {
-  @if $mode == to-pc{
+  @if $mode == to-pc {
     @media all and (min-width: device($selected)) {
       @content;
     }
   }
-  @if $mode == to-mb{
+  @if $mode == to-mb {
     $size: device($selected) - 1px;
     @media all and (max-width: $size) {
       @content;
@@ -116,17 +115,16 @@ $device: (
   }
 }
 
-
 // utilities
 
 // icon - FontAwesome: https://fontawesome.com/icons?d=gallery&m=free
-@mixin fa{
+@mixin fa {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
 
 // 寬高比 1:1
-@mixin square($size){
+@mixin square($size) {
   width: $size;
   height: $size;
 }
@@ -150,16 +148,20 @@ $device: (
                          在pad以下的裝置會以2個一列，彼此間距為12px
   
 */
-@mixin setgrids($number, $gap, $res: ((device:'xlpc'),(res-number:'2'),(res-gap:$gap))){
+@mixin setgrids(
+  $number,
+  $gap,
+  $res: ((device: "xlpc"), (res-number: "2"), (res-gap: $gap))
+) {
   $grid-width: 100%;
   $calcgap: false;
-  @if $number > 1  {
+  @if $number > 1 {
     @if $gap > 0px {
-      $calcperc: floorD(100/$number,2)*1%;
-      $calcgap: $gap*($number - 1)/$number;
-      $grid-width : calc(#{$calcperc} - #{$calcgap});
-    } @else{
-      $grid-width : 100%/$number;
+      $calcperc: floorD(100 / $number, 2) * 1%;
+      $calcgap: $gap * ($number - 1) / $number;
+      $grid-width: calc(#{$calcperc} - #{$calcgap});
+    } @else {
+      $grid-width: 100% / $number;
     }
   }
 
@@ -168,34 +170,34 @@ $device: (
   > * {
     flex-basis: $grid-width;
     max-width: $grid-width;
-    @if ($gap != 0px){
+    @if ($gap != 0px) {
       margin-bottom: $gap;
     }
-    @if ($calcgap){
-      &:not(:nth-child(#{$number}n+#{$number})){
+    @if ($calcgap) {
+      &:not(:nth-child(#{$number}n + #{$number})) {
         margin-right: $gap;
       }
-      &:nth-child(#{$number}n+#{$number}){
+      &:nth-child(#{$number}n + #{$number}) {
         margin-right: 0;
       }
     }
-    @if ($res){
-      @each $i in $res{
-        $r-dev: nth($i,1);
-        $r-num: nth($i,2);
-        $r-gap: if( length($i)>2 , nth($i,3) , $gap );
-        @include res($r-dev){
-          $r-calcperc: floorD(100/$r-num,2)*1%;
-          $r-calcgap: $r-gap*($r-num - 1)/$r-num;
+    @if ($res) {
+      @each $i in $res {
+        $r-dev: nth($i, 1);
+        $r-num: nth($i, 2);
+        $r-gap: if(length($i) >2, nth($i, 3), $gap);
+        @include res($r-dev) {
+          $r-calcperc: floorD(100 / $r-num, 2) * 1%;
+          $r-calcgap: $r-gap * ($r-num - 1) / $r-num;
           margin-bottom: $r-gap;
-          &:not(:nth-child(#{$r-num}n+#{$r-num})){
+          &:not(:nth-child(#{$r-num}n + #{$r-num})) {
             margin-right: $r-gap;
           }
-          &:nth-child(#{$r-num}n+#{$r-num}){
+          &:nth-child(#{$r-num}n + #{$r-num}) {
             margin-right: 0;
           }
           $r-grid-width: calc(#{$r-calcperc} - #{$r-calcgap});
-          @if $r-gap == 0px{
+          @if $r-gap == 0px {
             $r-grid-width: $r-calcperc;
           }
           flex-basis: $r-grid-width;
@@ -206,25 +208,25 @@ $device: (
   }
 }
 // 寬高比固定, 且背景設定置中
-@mixin imgbox($ratio,$minheight:null){
+@mixin imgbox($ratio, $minheight: null) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-    &:before{
-      content: '';
-      display: block;
-      @if ($minheight){
-        min-height: $minheight;
-      }
-      width: 100%;
-      padding-bottom: $ratio;
+  &:before {
+    content: "";
+    display: block;
+    @if ($minheight) {
+      min-height: $minheight;
     }
+    width: 100%;
+    padding-bottom: $ratio;
+  }
 }
 // for example：
 // $line = 2, $lineheight: 1.5em
 // 代表文字最多呈現兩行，超過兩行則隱藏 (行高設定為 1.5em )
-@mixin textbox($line, $lineheight: 1.5em){
+@mixin textbox($line, $lineheight: 1.5em) {
   display: block;
   display: -webkit-box;
   overflow: hidden;
@@ -238,40 +240,38 @@ $device: (
 // 設定 flexbox
 // 若 $align = center，則水平、垂直皆置中
 // 若 $align = x，則水平置中
-@mixin flexbox($align){
-    display: flex;
-    @if ($align == center) {
-        align-items: center;
-        justify-content: center;
-    }
-    @else if($align == x) {
-        justify-content: center;
-    }
-    @else if($align == y) {
-        align-items: center;
-    }
+@mixin flexbox($align) {
+  display: flex;
+  @if ($align == center) {
+    align-items: center;
+    justify-content: center;
+  } @else if($align == x) {
+    justify-content: center;
+  } @else if($align == y) {
+    align-items: center;
+  }
 }
 // 正圓形且帶有背景的容器
 // 內容預設水平、垂直置中
-@mixin oval($size,$bg){
+@mixin oval($size, $bg) {
   width: $size;
   height: $size;
   border-radius: 50%;
   background: $bg;
-  @include flexbox(center)
+  @include flexbox(center);
 }
 
 // 滿版背景（絕對位置）
-@mixin overlay($bg){
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $bg;
+@mixin overlay($bg) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $bg;
 }
 
-@mixin absolute($top, $right, $bottom, $left){
+@mixin absolute($top, $right, $bottom, $left) {
   top: $top;
   left: $left;
   bottom: $bottom;
@@ -279,12 +279,21 @@ $device: (
 }
 
 // 設定 瀏覽器捲軸 的樣式
-@mixin scrollbar($width, $bg, $color, $hover){
+@mixin scrollbar($width, $bg, $color, $hover) {
   $scrollbar: -webkit-scrollbar;
-  ::#{$scrollbar} {width: $wid;height: $width}
-  ::#{$scrollbar}-track {background: $bg; }
-  ::#{$scrollbar}-thumb {background: $color; }
-  ::#{$scrollbar}-thumb:hover {background: $hover; }
+  ::#{$scrollbar} {
+    width: $wid;
+    height: $width;
+  }
+  ::#{$scrollbar}-track {
+    background: $bg;
+  }
+  ::#{$scrollbar}-thumb {
+    background: $color;
+  }
+  ::#{$scrollbar}-thumb:hover {
+    background: $hover;
+  }
 }
 
 // 淡入
