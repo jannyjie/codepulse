@@ -43,9 +43,6 @@
           &::before {
             height: calc(100% - 10px);
           }
-          h3 {
-            font-size: 45px;
-          }
           .text-des {
             color: #45575f;
           }
@@ -279,28 +276,28 @@
 }
 
 //時間軸slick強制寫入動畫
-// .historyGroupList {
-//   transition-delay: 2s;
-//   //尚未輪播到的畫面
-//   .slick-slide {
-//     .txt > h3,
-//     .text-des {
-//       transform: translateX(-20px);
-//       opacity: 0;
-//     }
-//     &.slick-current {
-//       .txt > h3,
-//       .text-des {
-//         transform: translate(0);
-//         opacity: 1;
-//       }
-//     }
-//     &.slick-cloned {
-//       .txt > h3,
-//       .text-des {
-//         transform: translate(0);
-//         opacity: 1;
-//       }
-//     }
-//   }
-// }
+.historyGroupList {
+  transition-delay: 2s;
+  //尚未輪播到的畫面
+  .slick-slide {
+    .txt > h3,
+    .text-des {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    &.slick-current {
+      .txt > h3,
+      .text-des {
+        transform: translate(0);
+        opacity: 1;
+      }
+    }
+    &.slick-cloned {
+      .txt > h3,
+      .text-des {
+        transform: translate(0);
+        opacity: 1;
+      }
+    }
+  }
+}
