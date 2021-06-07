@@ -195,6 +195,45 @@ $(document).ready(function () {
             ]
         });
 
+        // timeline
+        $(".historyGroupList").slick({
+            dots: false,
+            arrows: true,
+            autoplay: false,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 1,        
+            slidesToScroll: 1,
+            adaptiveHeight: false
+        });
+
+        $(".historyList").slick({
+            dots: false,
+            arrows: true,
+            autoplay: false,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 2,        
+            slidesToScroll: 2,
+            adaptiveHeight: false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
         // pictures popup
         picPopup.magnificPopup({
             type: 'image',

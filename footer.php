@@ -48,6 +48,8 @@
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/jquery.magnificpopup-1.1.0.min.js"></script>
 <script src="assets/js/waves-0.7.6.min.js"></script>
+<script src="assets/js/lodash.min.js"></script>
+<script src="assets/js/vue.js"></script>
 <script src="assets/js/common.js?t=<?=time()?>"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {

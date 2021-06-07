@@ -24,6 +24,7 @@
           <li><a href="news.php">最新消息 News</a></li>
           <li><a href="article.php">文章內頁 Article</a></li>
           <li><a href="faq.php">常見問題 FAQs</a></li>
+          <li><a href="timeline.php">時間軸輪播 Timeline</a></li>
         </ul>
       </div>
       <div class="col-sm-6 col-md-4 col-lg-3">

@@ -2,28 +2,31 @@
 // ---
 // Reboot
 // ---
-*, ::after, ::before, :after, :before{ 
+*,
+::after,
+::before,
+:after,
+:before {
   box-sizing: border-box;
 }
 
-
-
-ul, ol{
-  padding: 0; 
-  margin: 0; 
+ul,
+ol {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
 // default
-body{
+body {
   margin: 0;
   font-family: $font-default;
 }
 
-a{
+a {
   display: inline-block;
   color: $main;
-  transition: .3s linear all;
+  transition: 0.3s linear all;
   &:hover {
     text-decoration: none;
     color: $black;
@@ -33,16 +36,24 @@ a{
   }
 }
 
-img, iframe{
+img,
+iframe {
   max-width: 100%;
 }
+
+//iframe 強制為100%的話，高設為等比例
+// iframe {
+//   width: 100%;
+//   height: 100vh;
+// }
+
 // section 預設 padding
-section{
+section {
   padding: 30px 0;
-  @include res(xlpad){
+  @include res(xlpad) {
     padding: 48px 0;
   }
-  @include res(xlpc){
+  @include res(xlpc) {
     padding: 72px 0;
   }
 }
@@ -51,62 +62,64 @@ a:focus {
   outline: none;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   border: 0;
-  &:focus{
+  &:focus {
     outline: none;
   }
 }
 
-$input-prefix: '::-webkit-input-',':-moz-','::-moz-',':-ms-input-';
+$input-prefix: "::-webkit-input-", ":-moz-", "::-moz-", ":-ms-input-";
 
 // placeholder 顏色
-@each $i in $input-prefix{
-  #{$i}placeholder{
+@each $i in $input-prefix {
+  #{$i}placeholder {
     color: #c5c5c5;
   }
 }
 
 // margin & padding
-.mt-30{
-  @include m(top,20px);
-  @include res(xlpad){
-    @include m(top,30px);
+.mt-30 {
+  @include m(top, 20px);
+  @include res(xlpad) {
+    @include m(top, 30px);
   }
 }
 
-.mb-30{
-  @include m(bottom,20px);
-  @include res(xlpad){
-    @include m(bottom,30px);
+.mb-30 {
+  @include m(bottom, 20px);
+  @include res(xlpad) {
+    @include m(bottom, 30px);
   }
 }
 
-.breadcrumb{
+.breadcrumb {
   padding: 0;
   background: $none;
   font-size: 0.875em;
 }
 
-
 // 覆寫 slick.css 箭頭按鈕
 
-.slick-arrow{
+.slick-arrow {
   opacity: 0.5;
   background: $grey;
   padding: 0;
-  &:before{
+  &:before {
     color: $white;
     font-size: 15px;
   }
-  &:hover{
+  &:hover {
     background: $main;
     box-shadow: $shadow-button;
     opacity: 1;
   }
-  @include res(nb){
+  @include res(nb) {
     left: -50px;
-    &.slick-next{
+    &.slick-next {
       left: auto;
       right: -50px;
     }

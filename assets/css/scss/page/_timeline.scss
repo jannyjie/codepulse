@@ -1,0 +1,306 @@
+//時間軸
+.historyArea {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  margin-bottom: -100px;
+  @include res(nb, to-mb) {
+    padding-top: 40px;
+  }
+
+  .slick-arrow {
+    background: #49d5ed;
+    opacity: 0.2;
+    &:hover {
+      opacity: 1;
+      background: rgba(73, 213, 237, 0.5);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+    &.slick-prev {
+      left: -35px;
+      top: 35%;
+    }
+    &.slick-next {
+      right: -35px;
+      top: 35%;
+    }
+  }
+
+  //桌機
+  .historyGroupList {
+    display: block;
+    @include res(nb, to-mb) {
+      display: none;
+    }
+    li {
+      padding: 0px 50px;
+    }
+    .item {
+      display: flex;
+      max-width: 360px;
+      &:hover {
+        cursor: default;
+        .txt {
+          &::before {
+            height: calc(100% - 10px);
+          }
+          h3 {
+            font-size: 45px;
+          }
+          .text-des {
+            color: #45575f;
+          }
+        }
+      }
+    }
+    .topBox {
+      .item {
+        &:hover {
+          .txt {
+            &::after {
+              top: 8px;
+            }
+          }
+        }
+      }
+    }
+    .bottomBox {
+      .item {
+        &:hover {
+          .txt {
+            &::after {
+              bottom: 8px;
+            }
+          }
+        }
+      }
+    }
+    .txt {
+      position: relative;
+      padding: 25px 45px 25px 25px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        width: 1px;
+        height: calc(100% - 40px);
+        transition: all 0.8s ease-out;
+        background: linear-gradient(to top, #3beedc, #58bafe);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: -5.5px;
+        z-index: 1;
+        width: 12px;
+        height: 12px;
+        transition: all 0.8s ease-out;
+        background: linear-gradient(to top, #3beedc, #58bafe);
+        border-radius: 50%;
+      }
+      h3 {
+        line-height: 1;
+        font-size: 30px;
+        color: #49d5ed;
+        transition: all 0.5s ease-in-out;
+      }
+      .text-des {
+        font-size: 14px;
+        color: #888888;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    .topBox,
+    .bottomBox {
+      display: flex;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .topBox {
+      align-items: flex-end;
+      .txt {
+        &:before {
+          bottom: 0;
+        }
+        &:after {
+          top: 35px;
+        }
+      }
+    }
+    .bottomBox {
+      position: relative;
+      align-items: flex-start;
+      padding-left: 180px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to top, #3beedc, #58bafe);
+        transition: 1s ease-out;
+      }
+
+      .txt {
+        &:before {
+          top: 0;
+        }
+        &:after {
+          bottom: 35px;
+        }
+      }
+    }
+    .topBox {
+      .item {
+        &:nth-child(1) {
+          .txt {
+            h3 {
+              color: #2d83a7;
+            }
+          }
+        }
+        &:nth-child(2) {
+          .txt {
+            h3 {
+              color: #266e8c;
+            }
+          }
+        }
+        &:nth-child(3) {
+          .txt {
+            h3 {
+              color: #20586f;
+            }
+          }
+        }
+      }
+    }
+    .bottomBox {
+      .item {
+        &:nth-child(1) {
+          .txt {
+            h3 {
+              color: #2d83a7;
+            }
+          }
+        }
+        &:nth-child(2) {
+          .txt {
+            h3 {
+              color: #266e8c;
+            }
+          }
+        }
+      }
+    }
+  }
+  //平板、手機
+  .historyList {
+    display: none;
+    @include res(nb, to-mb) {
+      display: block;
+    }
+    .item {
+      display: flex;
+      max-width: 360px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 5.5px;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to top, #3beedc, #58bafe);
+        transition: 1s ease-out;
+      }
+    }
+    .txt {
+      position: relative;
+      padding: 25px 45px 25px 25px;
+      padding-right: 0px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 1px;
+        height: calc(100% - 40px);
+        background: linear-gradient(to top, #3beedc, #58bafe);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -5.5px;
+        z-index: 1;
+        width: 12px;
+        height: 12px;
+        background: linear-gradient(to top, #3beedc, #58bafe);
+        border-radius: 50%;
+      }
+      h3 {
+        line-height: 1;
+        font-size: 40px;
+        color: #49d5ed;
+      }
+      .text-des {
+        font-size: 14px;
+        color: #c5c7d0;
+      }
+    }
+    .slick-slide {
+      &:nth-child(odd) {
+        .txt {
+          h3 {
+            color: #3beedc;
+          }
+        }
+      }
+      &:nth-child(even) {
+        .txt {
+          h3 {
+            color: #49d5ed;
+          }
+        }
+      }
+    }
+  }
+}
+
+//時間軸slick強制寫入動畫
+// .historyGroupList {
+//   transition-delay: 2s;
+//   //尚未輪播到的畫面
+//   .slick-slide {
+//     .txt > h3,
+//     .text-des {
+//       transform: translateX(-20px);
+//       opacity: 0;
+//     }
+//     &.slick-current {
+//       .txt > h3,
+//       .text-des {
+//         transform: translate(0);
+//         opacity: 1;
+//       }
+//     }
+//     &.slick-cloned {
+//       .txt > h3,
+//       .text-des {
+//         transform: translate(0);
+//         opacity: 1;
+//       }
+//     }
+//   }
+// }
