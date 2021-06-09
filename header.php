@@ -14,6 +14,8 @@
     <!-- ​​Pragma (cache模式) -->
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache">
+    <!-- iOS網頁中的數字自動變成藍色 加上這段自動修正 IOS -->
+    <meta name = "format-detection" content = "telephone=no">
 
     <link href="assets/img/fav.png" rel="shortcut icon" type="image/png">
 
