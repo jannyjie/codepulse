@@ -131,7 +131,7 @@
   }
 }
 
-.btn-outline-main  {
+.btn-outline-main {
   color: $main;
   border-color: $main;
 
@@ -289,10 +289,10 @@
 .hover-shadow-scale {
   transition: $transition;
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     transform: scale(1.05) translateY(-5px);
     box-shadow: $hover-shadow-card;
-
   }
 }
 
@@ -381,7 +381,15 @@
     height: auto !important;
   }
 
-  ul, ol, img, h1, h2, h3, h4, h5, h6 {
+  ul,
+  ol,
+  img,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-bottom: 1rem;
   }
 
@@ -389,7 +397,9 @@
     max-width: 100%;
   }
 
-  a { color: $main; }
+  a {
+    color: $main;
+  }
 
   blockquote {
     background-color: #f5f6fa;
@@ -423,7 +433,6 @@
       }
     }
   }
-
 }
 
 // flex-box 垂直置中, 水平為 space-between
@@ -522,7 +531,9 @@ table.rwd-table {
   }
 
   .td-with-img {
-    img { max-width: 80px; }
+    img {
+      max-width: 80px;
+    }
   }
 
   tr.active,
@@ -593,87 +604,89 @@ table.rwd-table {
 }
 
 .input-number {
-  width : 110px;
-  font-size : 0;
-  line-height : 30px;
-  border : 1px solid #CCCCCC;
-  vertical-align : top;
-  margin : 0 auto;
+  width: 110px;
+  font-size: 0;
+  line-height: 30px;
+  border: 1px solid #cccccc;
+  vertical-align: top;
+  margin: 0 auto;
 
-  .minus, .plus, input {
-    display : inline-block;
-    margin : 0;
-    padding : 5px;
-    width : 30px;
-    height : 30px;
-    text-align : center;
-    border : none;
-    vertical-align : top;
-    height : 30px;
+  .minus,
+  .plus,
+  input {
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    vertical-align: top;
+    height: 30px;
   }
 
   input {
-    width : 40px;
-    font-size : 1rem;
+    width: 40px;
+    font-size: 1rem;
   }
 
   .minus {
-    border-right : 1px solid #CCCCCC;
+    border-right: 1px solid #cccccc;
   }
   .plus {
-    border-left : 1px solid #CCCCCC;
+    border-left: 1px solid #cccccc;
   }
-  .minus, .plus {
-    width : 34px;
-    position : relative;
+  .minus,
+  .plus {
+    width: 34px;
+    position: relative;
     cursor: pointer;
 
     &:before {
-      content : '';
-      position : absolute;
-      top : 50%;
-      left : 50%;
-      width : 9px;
-      height : 1px;
-      pointer-events : none;
-      background-color : $black;
-      margin-left : -5px;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 9px;
+      height: 1px;
+      pointer-events: none;
+      background-color: $black;
+      margin-left: -5px;
     }
 
     &:hover {
-      background-color : #CCCCCC;
+      background-color: #cccccc;
     }
 
     &:hover:before {
-      background-color : #FFFFFF;
+      background-color: #ffffff;
     }
   }
 
   .plus:after {
-    content : '';
-    position : absolute;
-    pointer-events : none;
-    top : 50%;
-    left : 50%;
-    background-color : $black;
-    margin : -4px 0 0 -1px;
-    width : 1px;
-    height : 9px;
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    background-color: $black;
+    margin: -4px 0 0 -1px;
+    width: 1px;
+    height: 9px;
   }
   .plus:hover {
-    background-color : #CCCCCC;
+    background-color: #cccccc;
   }
   .plus:hover:after {
-    background-color : #FFFFFF;
+    background-color: #ffffff;
   }
 }
 
-@include res (phone, to-mb) {
+@include res(phone, to-mb) {
   .input-number {
-    margin : 0;
+    margin: 0;
   }
 }
-
 
 .cart-num {
   position: absolute;
@@ -687,4 +700,18 @@ table.rwd-table {
   line-height: 20px;
   text-align: center;
   border-radius: 50%;
+}
+
+//mobile rwd
+.d-mobile {
+  display: none;
+  @include res(phone, to-mb) {
+    display: block;
+  }
+}
+.d-desktop {
+  display: block;
+  @include res(phone, to-mb) {
+    display: none;
+  }
 }
