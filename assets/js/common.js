@@ -23,6 +23,9 @@ $(document).ready(function () {
     setupSliderCol3()
     setupProductGallery()
 
+    //timeline
+    timelineRWD();
+
     // scroll event
     $(window).on('scroll', function () {
         updateHeaderFixed()
@@ -195,6 +198,21 @@ $(document).ready(function () {
             ]
         });
 
+        // pictures popup
+        picPopup.magnificPopup({
+            type: 'image',
+            tLoading: 'Loading ...',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            }
+        });
+
+    }
+
+    
+    function timelineRWD() {
         // timeline
         $(".historyGroupList").slick({
             dots: false,
@@ -233,18 +251,6 @@ $(document).ready(function () {
                 }
             ]
         });
-
-        // pictures popup
-        picPopup.magnificPopup({
-            type: 'image',
-            tLoading: 'Loading ...',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-            }
-        });
-
     }
 
     function updateHeaderFixed() {
