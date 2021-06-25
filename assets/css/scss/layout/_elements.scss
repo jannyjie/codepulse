@@ -715,3 +715,10 @@ table.rwd-table {
     display: none;
   }
 }
+
+/*bootstrap input required*/
+label[aria-required="true"]:after {
+  content: "*";
+  color: red;
+  margin-left: 3px;
+}
