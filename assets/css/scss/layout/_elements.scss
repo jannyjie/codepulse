@@ -722,3 +722,8 @@ label[aria-required="true"]:after {
   color: red;
   margin-left: 3px;
 }
+
+//Vue Instance 不顯示變數
+[v-cloak] {
+  display: none;
+}
